@@ -43,6 +43,9 @@ def make_attr(s, k)
   ":#{k} \"#{s[k]}\"" if s[k]
 end
 
+# TODO: Extend to allow more attributes (bold, italic etc.)
+# Check what tmTheme allows.
+
 def face_attrs(s)
   "#{make_attr(s, "foreground")} #{make_attr(s, "background")}"
 end
