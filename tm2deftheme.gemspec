@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el"
   s.authors     = ["Jason Milkins"]
   s.email       = ["jasonm23@gmail.com"]
-  s.files       = Dir['lib/*.rb'] + Dir['bin/*'] + %W(README.md LICENSE)
+  s.files       = Dir['lib/*.rb'] + Dir['bin/*'] + Dir['templates/*'] + %W(README.md LICENSE)
   s.homepage    = "https://github.com/emacsfodder/tmtheme-to-deftheme"
   s.license     = "GPL3"
 

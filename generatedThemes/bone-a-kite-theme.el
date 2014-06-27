@@ -1,7 +1,7 @@
 ;;; bone-a-kite-theme.el --- an Emacs 24 theme based on Bone-a-kite (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403805165
+;;; Version: 1403866375
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme bone-a-kite
-  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-27 01:52:45 +0800")
+  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-27 18:52:55 +0800")
 
 (custom-theme-set-variables
  'bone-a-kite
@@ -25,84 +25,84 @@
  'bone-a-kite
  ;; basic theming.
 
-'(default ((t (:foreground "#F8F8F2" :background "#1c1e20"))))
-'(region  ((t (:background "#333333"))))
-'(cursor  ((t (:background "#F8F8F0"))))
+ '(default ((t (:foreground "#F8F8F2" :background "#1c1e20"))))
+ '(region  ((t (:background "#333333"))))
+ '(cursor  ((t (:background "#F8F8F0"))))
 
-;; Temporary defaults
-'(linum                               ((t (:foreground "#35393d"  :background "#24272a" ))))
-'(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
-'(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
-'(highlight                           ((t (:foreground "orange"   :background nil                                                     ))))
-'(shadow                              ((t (:foreground "#777777"  :background nil                                                     ))))
-'(secondary-selection                 ((t (                       :background "#342858"                                               ))))
-'(trailing-whitespace                 ((t (:foreground "#FFFFFF"  :background "#C74000"                                               ))))
-'(link                                ((t (:foreground "#00b7f0"  :background nil       :underline t                                  ))))
-'(link-visited                        ((t (:foreground "#4488cc"                       :underline t :inherit (link)                  ))))
-'(button                              ((t (:foreground "#FFFFFF"  :background "#444444" :underline t :inherit (link)                  ))))
-'(fringe                              ((t (                       :background "#24272a" ))))
-'(next-error                          ((t (                                             :inherit (region)                             ))))
-'(query-replace                       ((t (                                             :inherit (isearch)                            ))))
-'(header-line                         ((t (:foreground "#EEEEEE"  :background "#444444" :box nil :inherit (mode-line)                 ))))
-'(mode-line-highlight                 ((t (                                             :box nil                                      ))))
-'(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
-'(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
-'(mode-line-inactive                  ((t (:foreground "#d6d6b2"  :background "#16181a" :box nil :weight light :inherit (mode-line)   ))))
-'(mode-line                           ((t (:foreground "#f8f8f2"  :background "#111213" :box nil ))))
-'(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
-'(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))
-'(lazy-highlight                      ((t (                       :background "#77bbdd"                                               ))))
-'(match                               ((t (                       :background "#3388cc"                                               ))))
-'(tooltip                             ((t (:foreground "black"    :background "LightYellow" :inherit (variable-pitch)                 ))))
-'(js3-function-param-face             ((t (:foreground "#BFC3A9"                                                                      ))))
-'(js3-external-variable-face          ((t (:foreground "#F0B090"  :bold t                                                             ))))
-'(cua-rectangle                       ((t (:foreground "#E0E4CC"  :background "#342858" ))))
+ ;; Temporary defaults
+ '(linum                               ((t (:foreground "#35393d"  :background "#24272a" ))))
+ '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
+ '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
+ '(highlight                           ((t (:foreground "orange"   :background nil                                                     ))))
+ '(shadow                              ((t (:foreground "#777777"  :background nil                                                     ))))
+ '(secondary-selection                 ((t (                       :background "#342858"                                               ))))
+ '(trailing-whitespace                 ((t (:foreground "#FFFFFF"  :background "#C74000"                                               ))))
+ '(link                                ((t (:foreground "#00b7f0"  :background nil       :underline t                                  ))))
+ '(link-visited                        ((t (:foreground "#4488cc"                       :underline t :inherit (link)                  ))))
+ '(button                              ((t (:foreground "#FFFFFF"  :background "#444444" :underline t :inherit (link)                  ))))
+ '(fringe                              ((t (                       :background "#24272a" ))))
+ '(next-error                          ((t (                                             :inherit (region)                             ))))
+ '(query-replace                       ((t (                                             :inherit (isearch)                            ))))
+ '(header-line                         ((t (:foreground "#EEEEEE"  :background "#444444" :box nil :inherit (mode-line)                 ))))
+ '(mode-line-highlight                 ((t (                                             :box nil                                      ))))
+ '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
+ '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
+ '(mode-line-inactive                  ((t (:foreground "#d6d6b2"  :background "#16181a" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "#f8f8f2"  :background "#111213" :box nil ))))
+ '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
+ '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))
+ '(lazy-highlight                      ((t (                       :background "#77bbdd"                                               ))))
+ '(match                               ((t (                       :background "#3388cc"                                               ))))
+ '(tooltip                             ((t (:foreground "black"    :background "LightYellow" :inherit (variable-pitch)                 ))))
+ '(js3-function-param-face             ((t (:foreground "#BFC3A9"                                                                      ))))
+ '(js3-external-variable-face          ((t (:foreground "#F0B090"  :bold t                                                             ))))
+ '(cua-rectangle                       ((t (:foreground "#E0E4CC"  :background "#342858" ))))
 
-;; flyspell-mode
-'(flyspell-incorrect                  ((t (:underline "#AA0000" :background nil :inherit nil ))))
-'(flyspell-duplicate                  ((t (:underline "#009945" :background nil :inherit nil ))))
+ ;; flyspell-mode
+ '(flyspell-incorrect                  ((t (:underline "#AA0000" :background nil :inherit nil ))))
+ '(flyspell-duplicate                  ((t (:underline "#009945" :background nil :inherit nil ))))
 
-;; flymake-mode
-'(flymake-errline                     ((t (:underline "#AA0000" :background nil :inherit nil ))))
-'(flymake-warnline                    ((t (:underline "#009945" :background nil :inherit nil ))))
+ ;; flymake-mode
+ '(flymake-errline                     ((t (:underline "#AA0000" :background nil :inherit nil ))))
+ '(flymake-warnline                    ((t (:underline "#009945" :background nil :inherit nil ))))
 
-;; Magit hightlight
-'(magit-item-highlight                ((t (:foreground "white" :background "#1278A8" :inherit nil ))))
+ ;; Magit hightlight
+ '(magit-item-highlight                ((t (:foreground "white" :background "#1278A8" :inherit nil ))))
 
-;;git-gutter
-'(git-gutter:added                    ((t (:foreground "#609f60" :bold t))))
-'(git-gutter:modified                 ((t (:foreground "#3388cc" :bold t))))
-'(git-gutter:deleted                  ((t (:foreground "#cc3333" :bold t))))
+ ;;git-gutter
+ '(git-gutter:added                    ((t (:foreground "#609f60" :bold t))))
+ '(git-gutter:modified                 ((t (:foreground "#3388cc" :bold t))))
+ '(git-gutter:deleted                  ((t (:foreground "#cc3333" :bold t))))
 
-'(diff-added                          ((t (:background "#305030"))))
-'(diff-removed                        ((t (:background "#903010"))))
-'(diff-file-header                    ((t (:background "#362145"))))
-'(diff-context                        ((t (:foreground "#E0E4CC"))))
-'(diff-changed                        ((t (:foreground "#3388cc"))))
-'(diff-hunk-header                    ((t (:background "#242130"))))
+ '(diff-added                          ((t (:background "#305030"))))
+ '(diff-removed                        ((t (:background "#903010"))))
+ '(diff-file-header                    ((t (:background "#362145"))))
+ '(diff-context                        ((t (:foreground "#E0E4CC"))))
+ '(diff-changed                        ((t (:foreground "#3388cc"))))
+ '(diff-hunk-header                    ((t (:background "#242130"))))
 
-'(font-lock-comment-face ((t (:foreground "#75715E" :background "#75715E12"))))
-'(font-lock-string-face ((t (:foreground "#E6DB74" :background "#E6DB7412"))))
-'(font-lock-builtin-face ((t (:foreground "#AE81FF" :background "#AE81FF12"))))
-'(font-lock-variable-name-face ((t (:foreground "#F88767" :background "#F8876712"))))
-'(font-lock-keyword-face ((t (:foreground "#F92672" :background "#F9267212"))))
-'(font-lock-function-name-face ((t (:foreground "#A6E22E" :background "#A6E22E12"))))
-'(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#AE81FF"))))
-'(font-lock-comment-delimiter-face ((t (:foreground "#75715E" :background "#75715E12"))))
-) ;; Close color faces block
+ '(font-lock-comment-face ((t (:foreground "#75715e" :background "#222424"))))
+ '(font-lock-string-face ((t (:foreground "#e6db74" :background "#2a2b26"))))
+ '(font-lock-builtin-face ((t (:foreground "#ae81ff" :background "#262530"))))
+ '(font-lock-variable-name-face ((t (:foreground "#f88767" :background "#2c2525"))))
+ '(font-lock-keyword-face ((t (:foreground "#f92672" :background "#2c1f26"))))
+ '(font-lock-function-name-face ((t (:foreground "#a6e22e" :background "#262c21"))))
+ '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#ae81ff"))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#75715e" :background "#222424"))))
+)
 
 ;; Rainbow delimiters
 (defun bone-a-kite-rainbow-delim-set-face ()
-  (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#4A7D90")
-  (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#2C4B56")
-  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#1A2D33")
-  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#237A9A")
-  (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#2C5C62")
-  (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#1A374D")
-  (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#135A8A")
-  (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#225C65")
-  (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#14373C")
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#660000"))
+  (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#7a5bb3")
+  (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#896ebb")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#9880c4")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#a792cc")
+  (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#b6a5d5")
+  (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#c5b7de")
+  (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#d4cae6")
+  (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#e3dcef")
+  (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#f2eff7")
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#FF0000"))
 
 (eval-after-load "rainbow-delimiters" '(bone-a-kite-rainbow-delim-set-face))
 
@@ -118,4 +118,3 @@
 ;; End:
 
 ;;; bone-a-kite-theme.el ends here
-

@@ -11,6 +11,8 @@ Usage: tm2deftheme [themefile.tmTheme] [options]
 EOF
 
   on :f, 'ouput Emacs 24 deftheme to file'
+  on :s, 'when used with -f silence output'
+  on :o, 'when used with -f overwrite existing file'
 
   run do |opts, args|
     if args[0].nil?

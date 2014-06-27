@@ -33,8 +33,18 @@ module TmthemeToDeftheme
 
       rendered_theme = convert
 
-      if options[:output]
-        File.open("#{@long_theme_name}.el", "w") {|f| f.puts rendered_theme}
+      if options[:f]
+        deftheme_filename = "#{@long_theme_name}.el"
+        unless options[:s]
+          $stderr.puts "Converting #{theme_filename} to #{deftheme_filename}"
+        end
+        if File.exist? deftheme_filename
+          unless options[:o]
+            $stderr.puts "#{deftheme_filename} already exists, use -o to force overwrite"
+            exit 1
+          end
+        end
+        File.open(deftheme_filename, "w") {|f| f.puts rendered_theme}
       else
         puts rendered_theme
       end
@@ -165,7 +175,7 @@ module TmthemeToDeftheme
     end
 
     def render
-      Erubis::Eruby.new(File.read('templates/deftheme.eruby')).result(binding())
+      Erubis::Eruby.new(File.read(File.join(File.dirname(__FILE__),'../templates/deftheme.eruby'))).result(binding())
     end
 
   end
