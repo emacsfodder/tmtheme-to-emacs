@@ -1,6 +1,11 @@
+# encoding: utf-8
+
+$:.unshift File.expand_path('../lib', __FILE__)
+require 'tm2deftheme/version'
+
 Gem::Specification.new do |s|
   s.name        = "tm2deftheme"
-  s.version     = "0.1.2"
+  s.version     = TmthemeToDeftheme::VERSION
   s.date        = "2014-06-27"
   s.summary     = "Convert .tmTheme to Emacs 24 deftheme .el"
   s.description = "Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el"
