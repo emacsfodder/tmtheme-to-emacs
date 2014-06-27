@@ -1,16 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    coderay (1.1.0)
     color (1.7)
+    erubis (2.7.0)
     haml (4.0.5)
       tilt
     libxml-ruby (2.7.0)
     libxml4r (0.2.6)
       libxml-ruby (>= 1.1.3)
+    method_source (0.8.2)
     plist4r (1.2.2)
       haml
       libxml-ruby
       libxml4r
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    slop (3.5.0)
     tilt (2.0.1)
 
 PLATFORMS
@@ -18,4 +26,7 @@ PLATFORMS
 
 DEPENDENCIES
   color
+  erubis
   plist4r
+  pry
+  slop
