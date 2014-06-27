@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
   s.name        = "tm2deftheme"
-  s.version     = "0.1.1"
+  s.version     = "0.1.2"
   s.date        = "2014-06-27"
   s.summary     = "Convert .tmTheme to Emacs 24 deftheme .el"
   s.description = "Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el"
   s.authors     = ["Jason Milkins"]
   s.email       = ["jasonm23@gmail.com"]
-  s.files       = Dir['lib/*.rb'] + Dir['bin/*'] + Dir['templates/*'] + %W(README.md LICENSE)
+  s.files       = Dir['lib/*.rb'] + Dir['lib/*.yml'] + Dir['bin/*'] + Dir['templates/*'] + %W(README.md LICENSE)
   s.homepage    = "https://github.com/emacsfodder/tmtheme-to-deftheme"
   s.license     = "GPL3"
 
