@@ -24,7 +24,7 @@ Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el
 
         --debug    debugging output
 
-When run without options converte theme is sent to `STDOUT`
+When run without options converted theme is sent to `STDOUT`
 
 ### Dependencies
 
