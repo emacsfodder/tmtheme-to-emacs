@@ -73,19 +73,17 @@ module TmthemeToDeftheme
       emacs_face = lookup_scope hash["scope"]
       settings = hash["settings"]
       return nil if emacs_face.nil?
-      debug_out ({face: emacs_face, settings: settings, scope: hash["scope"]})
-      {face: emacs_face, settings: settings, scope: hash["scope"]}
+      mapped_scope = {face: emacs_face, settings: settings, scope: hash["scope"]}
+      debug_out(mapped_scope)
+      mapped_scope
+    end
+
+    def map_palette_key faces, key
+      faces.map{|f| Color::RGB.from_html f[:settings][key] if f[:settings][key]}.compact
     end
 
     def isolate_palette faces
-      [
-       faces.map{|f| # foreground colors
-         Color::RGB.from_html f[:settings]["foreground"] if f[:settings]["foreground"]
-       }.compact,
-       faces.map{|f| # background colors
-        Color::RGB.from_html f[:settings]["background"] if f[:settings]["background"]
-       }.compact
-      ]
+      [map_palette_key( faces, "foreground"), map_palette_key( faces, "background")]
     end
 
     def fix_rgba hexcolor
