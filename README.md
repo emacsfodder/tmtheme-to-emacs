@@ -24,5 +24,7 @@ When run without options output goes to `STDOUT`
 
 ### Dependencies
 
-Ruby 1.9+, install dependencies with bundler, run `bundle install` in
-the project folder.
+For normal use, Ruby 1.9 or later, required.
+
+For development, clone and install dependencies with bundler, run
+`bundle install` in the project folder.
