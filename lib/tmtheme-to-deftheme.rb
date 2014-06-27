@@ -3,28 +3,11 @@ module TmthemeToDeftheme
   require 'plist4r'
   require 'color'
   require 'erubis'
+  require 'yaml'
 
   class Main
 
-    SCOPE_MAP = [
-                 ["class",                "font-lock-type-face"],
-                 ["comment",              "font-lock-comment-face"],
-                 ["constant",             "font-lock-constant-face"],
-                 ["constant.language",    "font-lock-builtin-face"],
-                 ["diff.header",          "diff-file-header"],
-                 ["entity",               "font-lock-type-face"],
-                 ["entity.name.function", "font-lock-function-name-face"],
-                 ["invalid.illegal",      "error"],
-                 ["invalid.deprecated",   "font-lock-warning-face"],
-                 ["keyword",              "font-lock-keyword-face"],
-                 ["markup.changed",       "diff-changed"],
-                 ["markup.deleted",       "diff-removed"],
-                 ["markup.inserted",      "diff-added"],
-                 ["meta.preprocessor.c",  "font-lock-preprocessor-face"],
-                 ["string",               "font-lock-string-face"],
-                 ["variable",             "font-lock-variable-name-face"]
-                ]
-
+    SCOPE_MAP = YAML.load_file(File.join(File.dirname(__FILE__),'scopes-to-faces.yml'))
     TM_SCOPES = SCOPE_MAP.map(&:first)
     EMACS_FACES = SCOPE_MAP.map(&:last)
 
@@ -175,7 +158,7 @@ module TmthemeToDeftheme
     end
 
     def render
-      Erubis::Eruby.new(File.read(File.join(File.dirname(__FILE__),'../templates/deftheme.eruby'))).result(binding())
+      Erubis::Eruby.new(File.read(File.join(File.dirname(__FILE__),'..','templates','deftheme.eruby'))).result(binding())
     end
 
   end
