@@ -1,7 +1,7 @@
 ;;; ciapre-theme.el --- an Emacs 24 theme based on Ciapre (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403877371
+;;; Version: 1403877861
 ;;; Original author: Vinh Nguyen
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme ciapre
-  "ciapre-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:11 +0800")
+  "ciapre-theme - Created by tmtheme-to-deftheme - 2014-06-27 22:04:21 +0800")
 
 (custom-theme-set-variables
  'ciapre

@@ -1,7 +1,7 @@
 ;;; mbo-theme.el --- an Emacs 24 theme based on mbo (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403877375
+;;; Version: 1403877865
 ;;; Original author: Marko Bonaci
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme mbo
-  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:15 +0800")
+  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-27 22:04:25 +0800")
 
 (custom-theme-set-variables
  'mbo
