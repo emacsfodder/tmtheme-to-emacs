@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require 'tmtheme-to-deftheme'
+require 'slop'
+
+Slop.parse do
+
+  banner <<-EOF
+TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el
+
+Usage: tm2deftheme [themefile.tmTheme] [options]
+EOF
+
+  on :f, 'ouput Emacs 24 deftheme to file'
+
+  run do |opts, args|
+    if args[0].nil?
+      $stderr.puts opts
+      exit 1
+    end
+
+    theme_filename = args[0]
+
+    unless File.exist? theme_filename
+      $stderr.puts "#{theme_filename} : file doesn't exist"
+      exit 1
+    end
+
+    TmthemeToDeftheme::Main.new theme_filename, opts
+  end
+
+end
