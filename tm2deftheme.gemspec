@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "tm2deftheme"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
   s.date        = "2014-06-27"
   s.summary     = "Convert .tmTheme to Emacs 24 deftheme .el"
   s.description = "Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el"
