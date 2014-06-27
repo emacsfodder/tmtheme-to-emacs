@@ -1,7 +1,7 @@
 ;;; tech49-theme.el --- an Emacs 24 theme based on Tech49 (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403866377
+;;; Version: 1403877373
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme tech49
-  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-27 18:52:57 +0800")
+  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:13 +0800")
 
 (custom-theme-set-variables
  'tech49
@@ -84,6 +84,7 @@
  '(font-lock-comment-face ((t (:foreground "#3f5459" ))))
  '(font-lock-variable-name-face ((t (:foreground "#fefedb" ))))
  '(font-lock-builtin-face ((t (:foreground "#ff815c" ))))
+ '(font-lock-type-face ((t (:foreground "#d9fefd" ))))
  '(font-lock-string-face ((t (:foreground "#9ea485" ))))
  '(font-lock-function-name-face ((t (:foreground "#78cfde" ))))
  '(font-lock-keyword-face ((t (:foreground "#d1dbaf" ))))
@@ -98,8 +99,8 @@
 (defun tech49-rainbow-delim-set-face ()
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#6f745d")
   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#7a7f67")
-  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#868b70")
-  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#90957b")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#858b70")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#8f957b")
   (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#999e87")
   (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#a3a792")
   (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#adb19e")

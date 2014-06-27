@@ -1,7 +1,7 @@
 ;;; rhuk-theme.el --- an Emacs 24 theme based on Rhuk (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403869455
+;;; Version: 1403877372
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme rhuk
-  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-27 19:44:15 +0800")
+  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:12 +0800")
 
 (custom-theme-set-variables
  'rhuk
@@ -86,6 +86,7 @@
  '(font-lock-builtin-face ((t (:foreground "#fdc51a" ))))
  '(font-lock-variable-name-face ((t ( ))))
  '(font-lock-keyword-face ((t (:foreground "#ff6814" ))))
+ '(font-lock-type-face ((t (:foreground "#e1861c" ))))
  '(font-lock-function-name-face ((t (:foreground "#e1861c" ))))
  '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#fdc51a"))))
  '(diff-removed ((t (:foreground "#ff6814" ))))

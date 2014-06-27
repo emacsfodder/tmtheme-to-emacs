@@ -1,7 +1,7 @@
 ;;; bone-a-kite-theme.el --- an Emacs 24 theme based on Bone-a-kite (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403866375
+;;; Version: 1403877370
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme bone-a-kite
-  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-27 18:52:55 +0800")
+  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:10 +0800")
 
 (custom-theme-set-variables
  'bone-a-kite
@@ -86,6 +86,7 @@
  '(font-lock-builtin-face ((t (:foreground "#ae81ff" :background "#262530"))))
  '(font-lock-variable-name-face ((t (:foreground "#f88767" :background "#2c2525"))))
  '(font-lock-keyword-face ((t (:foreground "#f92672" :background "#2c1f26"))))
+ '(font-lock-type-face ((t (:foreground "#a6e22e" :background "#262c21"))))
  '(font-lock-function-name-face ((t (:foreground "#a6e22e" :background "#262c21"))))
  '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#ae81ff"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#75715e" :background "#222424"))))
@@ -101,7 +102,7 @@
   (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#c5b7de")
   (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#d4cae6")
   (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#e3dcef")
-  (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#f2eff7")
+  (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#f2eef7")
   (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#FF0000"))
 
 (eval-after-load "rainbow-delimiters" '(bone-a-kite-rainbow-delim-set-face))

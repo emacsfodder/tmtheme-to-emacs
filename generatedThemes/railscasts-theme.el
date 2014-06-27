@@ -1,7 +1,7 @@
 ;;; railscasts-theme.el --- an Emacs 24 theme based on RailsCasts (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403868984
+;;; Version: 1403877372
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme railscasts
-  "railscasts-theme - Created by tmtheme-to-deftheme - 2014-06-27 19:36:24 +0800")
+  "railscasts-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:12 +0800")
 
 (custom-theme-set-variables
  'railscasts

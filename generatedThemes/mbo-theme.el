@@ -1,7 +1,7 @@
 ;;; mbo-theme.el --- an Emacs 24 theme based on mbo (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403866379
+;;; Version: 1403877375
 ;;; Original author: Marko Bonaci
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme mbo
-  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-27 18:52:59 +0800")
+  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:15 +0800")
 
 (custom-theme-set-variables
  'mbo
@@ -86,6 +86,7 @@
  '(font-lock-builtin-face ((t (:foreground "#ffcf6c" ))))
  '(font-lock-variable-name-face ((t ( ))))
  '(font-lock-keyword-face ((t (:foreground "#ffcf6c" ))))
+ '(font-lock-type-face ((t (:foreground "#ffffe9" ))))
  '(font-lock-function-name-face ((t (:foreground "#00a8c6" ))))
  '(font-lock-warning-face ((t (:foreground "#ffffed" :background "#004b59"))))
  '(diff-removed ((t (:foreground "#484032" ))))
@@ -98,10 +99,10 @@
 (defun mbo-rainbow-delim-set-face ()
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#01778b")
   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#018398")
-  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#018ea6")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#018fa6")
   (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#019ab4")
   (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#01a6c2")
-  (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#01b2d0")
+  (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#02b2d0")
   (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#02bede")
   (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#02caec")
   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#02d6fa")

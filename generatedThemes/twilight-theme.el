@@ -1,7 +1,7 @@
 ;;; twilight-theme.el --- an Emacs 24 theme based on Twilight (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme
-;;; Version: 1403866378
+;;; Version: 1403877374
 ;;; Original author: Michael Sheets
 ;;; Url: https://github.com/emacsfodder/tmThemeToDeftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme twilight
-  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-27 18:52:58 +0800")
+  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-27 21:56:14 +0800")
 
 (custom-theme-set-variables
  'twilight
