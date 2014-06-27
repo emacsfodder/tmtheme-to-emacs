@@ -1,6 +1,6 @@
 # tm2deftheme
 
-Gem to convert a textmate (or SublimeText) tmTheme to Emacs deftheme
+Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme
 
 ### Install
 
@@ -12,7 +12,7 @@ Gem to convert a textmate (or SublimeText) tmTheme to Emacs deftheme
 
     options:
 
-        -f   save to a file named {filename.tmtheme}-theme.el
+        -f   save to a file named {filename}-theme.el
 
              e.g. Birds of Paradise.tmTheme
 
@@ -20,7 +20,7 @@ Gem to convert a textmate (or SublimeText) tmTheme to Emacs deftheme
 
                   birds-of-paradise-theme.el
 
-    With no options output is sent to STDOUT
+When run without options output goes to `STDOUT`
 
 ### Dependencies
 
