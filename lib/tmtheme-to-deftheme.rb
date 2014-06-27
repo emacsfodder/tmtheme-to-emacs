@@ -173,7 +173,7 @@ module TmthemeToDeftheme
         end
       end
 
-      return render
+      render
     end
 
     def render
