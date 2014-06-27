@@ -93,7 +93,7 @@ module TmthemeToDeftheme
         p = (a / 255.0) * 100.0
         c.mix_with(@base_bg, p).html
       elsif hexcolor.length == 7
-        Color::RGB.from_html(hexcolor).html
+        hexcolor
       end
     end
 
