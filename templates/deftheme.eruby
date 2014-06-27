@@ -91,7 +91,7 @@
 # using suitable tonal emphasis/de-emphasis as necessary.
 %>
 
-<% @emacs_faces.each do |e| %>
+<% @emacs_faces.each do |e| debug_out e[:face] %>
  '(<%= e[:face] %> ((t (<%= face_attrs(e[:settings]) %>))))
 <% end %>)
 <%

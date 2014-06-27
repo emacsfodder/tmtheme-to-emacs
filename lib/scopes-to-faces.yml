@@ -1,35 +1,61 @@
+# Pairs of TMate scopes and equivalent Emacs faces
+#
+# Order in reverse rank order, when multiple scopes map to a single
+# Emacs face.  (in other words list the preferred scope to face
+# mapping last, it'll override the former mappings)
 ---
 - - entity
   - font-lock-type-face
-- - entity.class.name
+
+- - entity.name.class
   - font-lock-type-face
+
 - - class
   - font-lock-type-face
+# Eg, see above: we prefer the class scope over `entity` and
+# `entity.name.class`
 - - comment
   - font-lock-comment-face
+
 - - constant
   - font-lock-constant-face
+
 - - constant.language
   - font-lock-builtin-face
+
 - - diff.header
   - diff-file-header
+
 - - entity.name.function
   - font-lock-function-name-face
+
 - - invalid.illegal
   - error
+
 - - invalid.deprecated
   - font-lock-warning-face
+
 - - keyword
   - font-lock-keyword-face
+
 - - markup.changed
   - diff-changed
+
 - - markup.deleted
   - diff-removed
+
 - - markup.inserted
   - diff-added
+
 - - meta.preprocessor.c
   - font-lock-preprocessor-face
+
 - - string
   - font-lock-string-face
-- - variable
-  - font-lock-variable-name-face
+
+# You can also list a scope/face mapping pair in the following format.
+- [variable, font-lock-variable-name-face]
+
+# Blank lines are ignored
+
+# See YAML Docs at http://yaml.org/spec/1.2/spec.html

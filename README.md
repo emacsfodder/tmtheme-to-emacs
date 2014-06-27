@@ -12,15 +12,17 @@ Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el
 
     options:
 
-        -f,         ouput Emacs 24 deftheme to file
-                    e.g. Birds of Paradise.tmTheme
+        -f         ouput Emacs 24 deftheme to file
+                   e.g. Birds of Paradise.tmTheme
 
-                    becomes:
+                   becomes:
 
-                    birds-of-paradise-theme.el
+                   birds-of-paradise-theme.el
 
-        -s,         when used with -f silence output
-        -o,         when used with -f overwrite existing file
+        -s         when used with -f silence output
+        -o         when used with -f overwrite existing file
+
+        --debug    debugging output
 
 When run without options converte theme is sent to `STDOUT`
 

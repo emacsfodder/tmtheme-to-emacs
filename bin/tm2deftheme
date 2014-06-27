@@ -10,9 +10,10 @@ TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el
 Usage: tm2deftheme [themefile.tmTheme] [options]
 EOF
 
-  on :f, 'ouput Emacs 24 deftheme to file'
-  on :s, 'when used with -f silence output'
-  on :o, 'when used with -f overwrite existing file'
+  on :f,     'ouput Emacs 24 deftheme to file'
+  on :s,     'when used with -f silence output'
+  on :o,     'when used with -f overwrite existing file'
+  on :debug, 'show debugging output'
 
   run do |opts, args|
     if args[0].nil?

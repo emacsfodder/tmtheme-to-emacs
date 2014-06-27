@@ -8,21 +8,22 @@ module TmthemeToDeftheme
   class Main
 
     SCOPE_MAP = YAML.load_file(File.join(File.dirname(__FILE__),'scopes-to-faces.yml'))
-    TM_SCOPES = SCOPE_MAP.map(&:first)
-    EMACS_FACES = SCOPE_MAP.map(&:last)
+    TM_SCOPES = SCOPE_MAP.map(&:first).map(&:strip)
+    EMACS_FACES = SCOPE_MAP.map(&:last).map(&:strip)
 
-    def initialize theme_filename, options={}
+    def initialize theme_filename, options
+
+      @options = options.to_hash
       @plist = Plist4r.open theme_filename
-
       rendered_theme = convert
 
-      if options[:f]
+      if @options[:f]
         deftheme_filename = "#{@long_theme_name}.el"
-        unless options[:s]
+        unless @options[:s]
           $stderr.puts "Converting #{theme_filename} to #{deftheme_filename}"
         end
         if File.exist? deftheme_filename
-          unless options[:o]
+          unless @options[:o]
             $stderr.puts "#{deftheme_filename} already exists, use -o to force overwrite"
             exit 1
           end
@@ -33,24 +34,31 @@ module TmthemeToDeftheme
       end
     end
 
+    def debug_out message
+      $stderr.puts message if @options[:debug]
+    end
+
     def lookup_scope scope
+
       if scope.index(",")
         names = scope.split(",").map(&:strip)
-        first_match = names.map{|n| TM_SCOPES.find_index n }.compact.first
+        debug_out names
+        first_match = names.map{|n| TM_SCOPES.find_index n}.compact.first
       else
+        debug_out scope
         first_match = TM_SCOPES.find_index(scope)
       end
+
       if first_match.nil?
         nil
       else
+        debug_out "#{first_match} :: #{scope} : #{EMACS_FACES[first_match]}"
         EMACS_FACES[first_match]
       end
     end
 
-    def has_face
-    end
-
     def make_attr(s, k)
+      debug_out "Make attrs: #{s[:face]} : #{k} : #{s} : #{s[k]}"
       ":#{k} \"#{s[k]}\"" if s[k]
     end
 
@@ -65,7 +73,8 @@ module TmthemeToDeftheme
       emacs_face = lookup_scope hash["scope"]
       settings = hash["settings"]
       return nil if emacs_face.nil?
-      {face: emacs_face, settings: settings}
+      debug_out ({face: emacs_face, settings: settings, scope: hash["scope"]})
+      {face: emacs_face, settings: settings, scope: hash["scope"]}
     end
 
     def isolate_palette faces
@@ -134,7 +143,16 @@ module TmthemeToDeftheme
       @name = @plist["name"]
       @theme_name = "#{@plist["name"]}".downcase.tr(' _', '-')
       @long_theme_name = "#{@theme_name}-theme"
+
+      debug_out "- tmTheme scope settings --------------------"
+      debug_out @plist["settings"].to_yaml
+
       @emacs_faces = @plist["settings"].collect{|s| map_scope_to_emacslisp(s) if s["scope"] }.compact
+
+      # Debug faces
+      debug_out "- Mapped faces ------------------------------"
+      debug_out @emacs_faces.to_yaml
+
       @base_bg = Color::RGB.from_html @base_settings["background"]
       @base_fg = Color::RGB.from_html @base_settings["foreground"]
 
@@ -143,6 +161,9 @@ module TmthemeToDeftheme
         f[:settings]["foreground"] = fix_rgba f[:settings]["foreground"] if f[:settings]["foreground"]
         f[:settings]["background"] = fix_rgba f[:settings]["background"] if f[:settings]["background"]
       end
+
+      debug_out "- Faces after RGBA fix ----------------------"
+      debug_out @emacs_faces.to_yaml
 
       @foreground_palette, @background_palette = isolate_palette @emacs_faces
       @rainbow_parens = make_rainbow_parens + ["#FF0000"]
