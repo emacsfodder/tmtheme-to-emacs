@@ -38,8 +38,8 @@ Linum, fringe and modeline colours are derived from the base foreground
 and background colors.  Support for [Rainbow Delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters) 
 is provided automatically.
 
-Here's how: The imported foreground colors which constrast most from the 
-background are averaged, from this average colour, 9 tint colors are generated and
+The imported foreground colors which constrast most from the background 
+are averaged, from this average colour, 9 tint colors are generated and
 assigned to the `rainbow-delimiters-depth-n-face` collection.
 
 I'll be adding additional support for `js3-mode`, git-gutter, flyspell, 
