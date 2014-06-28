@@ -97,6 +97,7 @@ module TmthemeToDeftheme
       end
     end
 
+    # Note: Foreground palette
     def palette_average_values sample_palette
       samples = sample_palette.map{|c|
         c = c.to_hsl
@@ -117,17 +118,30 @@ module TmthemeToDeftheme
       }
     end
 
+    def darktheme?
+      !lighttheme?
+    end
+
+    def lighttheme?
+      @base_bg.brightness > 0.45
+    end
+
     def make_rainbow_parens
-      samples = if @base_bg.brightness > 0.45
-        @foreground_palette.sort_by{|c| c.brightness }.select{|c| c.brightness < 0.30 }
+      samples = if lighttheme?
+        @foreground_palette.sort_by{|c| c.brightness }.select{|c| c.brightness < 0.65 }
       else
         @foreground_palette.sort_by{|c| - c.brightness }.select{|c| c.brightness > 0.45 }
       end
 
-      values = palette_average_values(samples)
-      average_color = values[:color]
-      darkest = values[:darkest]
-      rainbow_top = average_color.mix_with(darkest, 30)
+      debug_out "- Palette sample -------------------------------"
+      debug_out samples.map(&:html)
+      debug_out "- <<<<<<<<<<<<<< -------------------------------"
+
+      values = palette_average_values samples
+      @average_foregroung_color = values[:color]
+      @darkest_foregroung_color = values[:darkest]
+      @brightest_foregroung_color = values[:brightest]
+      rainbow_top = @average_foregroung_color.mix_with @darkest_foregroung_color, 30
 
       9.times.collect do |i|
         rainbow_top.adjust_brightness(i * 10).html
@@ -136,7 +150,16 @@ module TmthemeToDeftheme
 
     def convert
 
-      @base_settings = @plist["settings"][0]["settings"]
+      @base_settings = @plist["settings"].first["settings"]
+      @base_bg = Color::RGB.from_html @base_settings["background"]
+      @base_fg = Color::RGB.from_html @base_settings["foreground"]
+
+      if lighttheme?
+        debug_out "- Converting : Light Theme ----------------"
+      else
+        debug_out "- Converting : Dark Theme ----------------"
+      end
+
       @author = @plist["author"]
       @name = @plist["name"]
       @theme_name = "#{@plist["name"]}".downcase.tr(' _', '-')
@@ -151,9 +174,6 @@ module TmthemeToDeftheme
       debug_out "- Mapped faces ------------------------------"
       debug_out @emacs_faces.to_yaml
 
-      @base_bg = Color::RGB.from_html @base_settings["background"]
-      @base_fg = Color::RGB.from_html @base_settings["foreground"]
-
       # Fix any RGBA colors in the tmTheme
       @emacs_faces.each do |f|
         f[:settings]["foreground"] = fix_rgba f[:settings]["foreground"] if f[:settings]["foreground"]
@@ -167,7 +187,7 @@ module TmthemeToDeftheme
       @rainbow_parens = make_rainbow_parens + ["#FF0000"]
 
       if @emacs_faces.select{|f| f[:face] == "font-lock-comment-face"}
-        comment_face = @emacs_faces.select{|f| f[:face] == "font-lock-comment-face"}[0]
+        comment_face = @emacs_faces.select{|f| f[:face] == "font-lock-comment-face"}.first
         if comment_face
           @emacs_faces << {face: "font-lock-comment-delimiter-face", settings: comment_face[:settings]}
         end

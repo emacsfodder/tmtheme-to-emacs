@@ -16,12 +16,12 @@ EOF
   on :debug, 'show debugging output'
 
   run do |opts, args|
-    if args[0].nil?
+    if args.first.nil?
       $stderr.puts opts
       exit 1
     end
 
-    theme_filename = args[0]
+    theme_filename = args.first
 
     unless File.exist? theme_filename
       $stderr.puts "#{theme_filename} : file doesn't exist"

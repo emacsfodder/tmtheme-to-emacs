@@ -31,8 +31,15 @@
  <%
  # Linum and Fringe are generated from base_bg
  %>
+ <% if darktheme? %>
+ <% debug_out "Dark theme linum/fringe"  %>
  '(linum                               ((t (:foreground "<%= @base_bg.adjust_brightness(90).html %>"  :background "<%= @base_bg.adjust_brightness(30).html %>" ))))
  '(fringe                              ((t (                       :background "<%= @base_bg.adjust_brightness(30).html %>" ))))
+ <% else %>
+ <% debug_out "Light theme linum/fringe"  %>
+ '(linum                               ((t (:foreground "<%= @base_fg.adjust_brightness(90).html %>"  :background "<%= @base_bg.adjust_brightness(-30).html %>" ))))
+ '(fringe                              ((t (                       :background "<%= @base_bg.adjust_brightness(-30).html %>" ))))
+ <% end %>
 
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
@@ -41,7 +48,7 @@
 
  '(trailing-whitespace                 ((t (:foreground "#FFFFFF"  :background "#C74000"                                               ))))
  '(link                                ((t (:foreground "#00b7f0"  :background nil       :underline t                                  ))))
- '(link-visited                        ((t (:foreground "#4488cc"                       :underline t :inherit (link)                  ))))
+ '(link-visited                        ((t (:foreground "#4488cc"                        :underline t :inherit (link)                  ))))
  '(button                              ((t (:foreground "#FFFFFF"  :background "#444444" :underline t :inherit (link)                  ))))
  '(next-error                          ((t (                                             :inherit (region)                             ))))
  '(query-replace                       ((t (                                             :inherit (isearch)                            ))))
@@ -53,9 +60,20 @@
  '(mode-line-highlight                 ((t (                                             :box nil                                      ))))
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
+
+<% if darktheme? %>
+ <% debug_out "Dark theme modeline"  %>
  '(mode-line-inactive                  ((t (:foreground "<%= @base_fg.adjust_brightness(-20).html %>"  :background "<%= @base_bg.adjust_brightness(-20).html %>" :box nil :weight light :inherit (mode-line)   ))))
  '(mode-line                           ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.adjust_brightness(-40).html %>" :box nil ))))
+<% else %>
+ <% debug_out "Light theme modeline"  %>
+ '(mode-line-inactive                  ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.adjust_brightness(-10).html %>" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.adjust_brightness(-20).html %>" :box nil ))))
+<% end %>
 
+<%
+# Search highlighting
+%>
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))
  '(lazy-highlight                      ((t (                       :background "#77bbdd"                                               ))))
@@ -99,14 +117,16 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 <%
-# TODO: defaults should be overriden when the @emacs_faces below
-# are evaluated, it'd be much cleaner if we managed it a better
-# way.  Perhaps keep the default faces as a hash and then merge the
-# tmtheme imported faces hash, before writing out the face
-# definitions.
-#
+
+# TODO: defaults should be overriden when the @emacs_faces below are
+# evaluated, it'd be much cleaner if we managed it a better way.
+# Perhaps keep the default faces as a hash and then merge the tmtheme
+# imported faces hash, before writing out the face definitions.
+
 # TODO: Infer color values of defaults based on the provided palette,
-# using suitable tonal emphasis/de-emphasis as necessary.
+# using suitable tonal emphasis/de-emphasis as necessary. (this is
+# being done "casually" for the modeline, fringe and linum)
+
 %>
 
 <% @emacs_faces.each do |e| debug_out e[:face] %>
