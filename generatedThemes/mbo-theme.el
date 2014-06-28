@@ -1,7 +1,7 @@
 ;;; mbo-theme.el --- an Emacs 24 theme based on mbo (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403956053
+;;; Version: 1403986470
 ;;; Original author: Marko Bonaci
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme mbo
-  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:33 +0800")
+  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:30 +0800")
 
 (custom-theme-set-variables
  'mbo
@@ -95,6 +95,7 @@
  '(font-lock-keyword-face ((t (:foreground "#ffcf6c"  ))))
  '(font-lock-type-face ((t (:foreground "#ffffe9"  ))))
  '(font-lock-function-name-face ((t (:foreground "#00a8c6"  ))))
+ '(js3-function-param-face ((t (:foreground "#ffcf6c"  ))))
  '(font-lock-warning-face ((t (:foreground "#ffffed" :background "#004b59" ))))
  '(diff-removed ((t (:foreground "#484032"  ))))
  '(diff-added ((t (:foreground "#f6dbaa"  ))))
@@ -106,7 +107,7 @@
  '(rainbow-delimiters-depth-2-face ((t (:foreground "#018398"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "#018fa6"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "#019ab4"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#01a6c2"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#02a6c2"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "#02b2d0"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#02bede"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#02caec"))))

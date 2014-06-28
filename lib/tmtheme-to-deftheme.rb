@@ -21,7 +21,7 @@ module TmthemeToDeftheme
       if @options[:f]
         deftheme_filename = "#{@long_theme_name}.el"
         unless @options[:s]
-          $stderr.puts "Converting #{@theme_filename} to #{deftheme_filename}"
+          $stderr.puts "Creating: #{deftheme_filename}"
         end
         if File.exist? deftheme_filename
           unless @options[:o]
@@ -102,8 +102,6 @@ module TmthemeToDeftheme
         end
       elsif hexcolor.length == 7 || hexcolor.length == 4
         hexcolor
-      else
-        $stderr.puts "There was an error processing #{@theme_filename} - could not read color: #{hexcolor}"
       end
     end
 
@@ -159,6 +157,8 @@ module TmthemeToDeftheme
     end
 
     def convert
+
+      debug_out "= Converting : #{@theme_filename} =============================="
       debug_out "- tmTheme scope settings --------------------"
       debug_out @plist["settings"].to_yaml
 
@@ -182,16 +182,14 @@ module TmthemeToDeftheme
 
       # Debug faces
       debug_out "- Mapped faces ------------------------------"
-      debug_out @emacs_faces.to_yaml
 
       # Fix any RGBA colors in the tmTheme
       @emacs_faces.each do |f|
+        debug_out f.to_yaml
         f[:settings]["foreground"] = fix_rgba f[:settings]["foreground"] if f[:settings]["foreground"]
         f[:settings]["background"] = fix_rgba f[:settings]["background"] if f[:settings]["background"]
+        debug_out f.to_yaml
       end
-
-      debug_out "- Faces after RGBA fix ----------------------"
-      debug_out @emacs_faces.to_yaml
 
       @foreground_palette, @background_palette = isolate_palette @emacs_faces
       @rainbow_parens = make_rainbow_parens + ["#FF0000"]

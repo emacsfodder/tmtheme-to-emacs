@@ -1,60 +1,82 @@
 # Pairs of TMate scopes and equivalent Emacs faces
-#
-# Order in reverse rank order, when multiple scopes map to a single
-# Emacs face.  (in other words list the preferred scope to face
-# mapping last, it'll override the former mappings)
----
+
 - - entity
   - font-lock-type-face
-
 - - entity.name.class
   - font-lock-type-face
-
 - - class
   - font-lock-type-face
-# Eg, see above: we prefer the class scope over `entity` and
-# `entity.name.class`
 - - comment
   - font-lock-comment-face
-
 - - constant
   - font-lock-constant-face
-
 - - constant.language
   - font-lock-builtin-face
-
-- - diff.header
-  - diff-file-header
-
 - - entity.name.function
   - font-lock-function-name-face
-
+- - meta.preprocessor.c
+  - font-lock-preprocessor-face
+- - string
+  - font-lock-string-face
+- - variable
+  - font-lock-variable-name-face
+- - keyword
+  - font-lock-keyword-face
+- - diff.header
+  - diff-file-header
+- - markup.changed
+  - diff-changed
+- - markup.deleted
+  - diff-removed
+- - markup.inserted
+  - diff-added
+- - invalid.deprecated
+  - font-lock-warning-face
 - - invalid.illegal
   - error
 
-- - invalid.deprecated
-  - font-lock-warning-face
+# js3-mode
 
-- - keyword
-  - font-lock-keyword-face
+- - keyword.other.documentation.param.javadoc
+  - js3-jsdoc-tag-face
+- - variable.parameter
+  - js3-function-param-face
+- - variable.other.external-symbol
+  - js3-external-variable-face
 
-- - markup.changed
-  - diff-changed
+# GitGutter
 
-- - markup.deleted
-  - diff-removed
+- - markup.deleted.git_gutter
+  - git-gutter:deleted
+- - markup.inserted.git_gutter
+  - git-gutter:added
+- - markup.changed.git_gutter
+  - git-gutter:modified
+- - markup.ignored.git_gutter
+  - git-gutter:untracked
 
-- - markup.inserted
-  - diff-added
+# Markdown
 
-- - meta.preprocessor.c
-  - font-lock-preprocessor-face
-
-- - string
-  - font-lock-string-face
-
-# You can also list a scope/face mapping pair in the following format.
-- [variable, font-lock-variable-name-face]
+- - punctuation.definition.italic.markdown
+  - markdown-italic-face
+- - punctuation.definition.bold.markdown
+  - markdown-bold-face
+- - meta.separator.markdown
+  - markdown-header-rule-face
+- - entity.name.section.markdown
+  - markdown-header-face
+- - markup.raw.inline.markdown
+  - markdown-inline-code-face
+- - punctuation.definition.list_item.markdown
+  - markdown-list-face
+- - punctuation.definition.blockquote.markdown
+  - markdown-blockquote-face
+- - markup.raw.block.markdown
+  - markdown-pre-face
+- - meta.link.inline.markdown
+  - markdown-url-face
+- - string.other.link.title.markdown
+  - markdown-link-title-face
 
 # Blank lines are ignored
 

@@ -1,7 +1,7 @@
 ;;; bone-a-kite-theme.el --- an Emacs 24 theme based on Bone-a-kite (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403956047
+;;; Version: 1403986463
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme bone-a-kite
-  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:27 +0800")
+  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:23 +0800")
 
 (custom-theme-set-variables
  'bone-a-kite
@@ -95,6 +95,7 @@
  '(font-lock-keyword-face ((t (:foreground "#F92672" :background "#2c1f26" ))))
  '(font-lock-type-face ((t (:foreground "#A6E22E" :background "#262c21" :underline t))))
  '(font-lock-function-name-face ((t (:foreground "#A6E22E" :background "#262c21" ))))
+ '(js3-function-param-face ((t (:foreground "#FD971F" :background "#2c2720" :italic t))))
  '(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#AE81FF" ))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#75715E" :background "#222424" ))))
 

@@ -1,7 +1,7 @@
 ;;; earthsong-light-theme.el --- an Emacs 24 theme based on Earthsong Light (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403956052
+;;; Version: 1403986469
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme earthsong-light
-  "earthsong-light-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:32 +0800")
+  "earthsong-light-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:29 +0800")
 
 (custom-theme-set-variables
  'earthsong-light
@@ -95,22 +95,30 @@
  '(font-lock-keyword-face ((t (:foreground "#DB784D"  ))))
  '(font-lock-type-face ((t (:foreground "#DB784D"  :underline t))))
  '(font-lock-function-name-face ((t (:foreground "#60A365"  ))))
+ '(js3-function-param-face ((t (  :italic t))))
  '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#00a8c6" ))))
  '(diff-removed ((t (:foreground "#00A8C6"  ))))
  '(diff-added ((t (:foreground "#A6E22E"  ))))
  '(diff-changed ((t (:foreground "#E6DB74"  ))))
+ '(markdown-header-face ((t (:foreground "#DB784D"  ))))
+ '(markdown-inline-code-face ((t (:foreground "#F8BB39"  ))))
+ '(markdown-bold-face ((t (:foreground "#DB784D"  ))))
+ '(markdown-pre-face ((t (:foreground "#00a8c6"  ))))
+ '(git-gutter:deleted ((t (:foreground "#e61f44"  ))))
+ '(git-gutter:added ((t (:foreground "#a7da1e"  ))))
+ '(git-gutter:modified ((t (:foreground "#f7b83d"  ))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#d6cab9"  ))))
 
 ;; Rainbow delimiters
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#01768b"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#018299"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#018ea6"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#019ab4"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#01a6c2"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#01b1d0"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#01bdde"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "#01c9ec"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#01d5fa"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#a11630"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#b11934"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#c21b39"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#d21d3e"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#e02144"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#e23151"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#e5415f"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#e7516d"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#e9617a"))))
  '(rainbow-delimiters-unmatched-face ((t (:foreground "#FF0000"))))
 ) ;; End face definitions
 

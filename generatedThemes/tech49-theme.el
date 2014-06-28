@@ -1,7 +1,7 @@
 ;;; tech49-theme.el --- an Emacs 24 theme based on Tech49 (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403956051
+;;; Version: 1403986468
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme tech49
-  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:31 +0800")
+  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:28 +0800")
 
 (custom-theme-set-variables
  'tech49
@@ -99,18 +99,21 @@
  '(diff-removed ((t (:foreground "#ff815a"  ))))
  '(diff-added ((t (:foreground "#c4fefd"  ))))
  '(diff-changed ((t (:foreground "#fcffc7"  ))))
+ '(markdown-blockquote-face ((t (:foreground "#c5cf8d"  :italic t))))
+ '(markdown-link-title-face ((t (:foreground "#b3bd93"  :underline t))))
+ '(markdown-list-face ((t (:foreground "#fc674e"  ))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#3f5459"  ))))
 
 ;; Rainbow delimiters
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#6f745d"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#7a7f67"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#858b70"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#8f957b"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#999e87"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#a3a792"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#adb19e"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "#b7baa9"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#c0c3b5"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#b14937"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#c3503c"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#c8604e"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#ce7060"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#d38071"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#d99083"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#dea095"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#e4b0a6"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#e9c0b8"))))
  '(rainbow-delimiters-unmatched-face ((t (:foreground "#FF0000"))))
 ) ;; End face definitions
 

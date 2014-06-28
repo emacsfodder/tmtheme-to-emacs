@@ -1,7 +1,7 @@
 ;;; rhuk-theme.el --- an Emacs 24 theme based on Rhuk (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403956050
+;;; Version: 1403986467
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme rhuk
-  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:30 +0800")
+  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:27 +0800")
 
 (custom-theme-set-variables
  'rhuk
@@ -95,6 +95,7 @@
  '(font-lock-keyword-face ((t (:foreground "#ff6814"  ))))
  '(font-lock-type-face ((t (:foreground "#e1861c"  :underline t))))
  '(font-lock-function-name-face ((t (:foreground "#e1861c"  ))))
+ '(js3-function-param-face ((t (:foreground "#FD971F"  :italic t))))
  '(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#fdc51a" ))))
  '(diff-removed ((t (:foreground "#ff6814"  ))))
  '(diff-added ((t (:foreground "#e1861c"  ))))
@@ -103,7 +104,7 @@
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#b3490e"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#c55110"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#c5510f"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "#d75811"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "#e95f12"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "#ee6b21"))))
