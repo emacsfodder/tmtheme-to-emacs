@@ -34,15 +34,15 @@ highlighing support, but `tm2deftheme` (currently) only maps to core
 `font-lock` faces. So while things won't look like a one-to-one copy,
 the results are still pretty good.
 
-Linum, fringe and modeline colours are derived from the base foreground 
-and background colors.  Support for [Rainbow Delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters) 
+Linum, fringe and modeline colours are derived from the base foreground
+and background colors.  Support for [Rainbow Delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
 is provided automatically.
 
-The imported foreground colors which constrast most from the background 
+The imported foreground colors which constrast most from the background
 are averaged, from this average colour, 9 tint colors are generated and
 assigned to the `rainbow-delimiters-depth-n-face` collection.
 
-I'll be adding additional support for `js3-mode`, git-gutter, flyspell, 
+I'll be adding additional support for `js3-mode`, git-gutter, flyspell,
 flymake, flycheck, isearch and more.
 
 ### Demo
@@ -59,3 +59,15 @@ and then shown in Emacs 24 after conversion.
 Ruby 1.9 or later required.
 
 Development, clone and run `bundle install` in the project folder.
+
+### Contribution  / Development
+
+If you'd like to contribute, the best place to do so is in mapping
+SublimeText / TextMate scopes to Emacs faces.  Although any issue
+posting, bug fixing, feature pull-requests, etc. are welcome.
+
+Avoid using `test.sh` and `install-generated-themes.el`, they're not
+tuned for general use.
+
+PLEASE NOTE: `test.sh` will forceably remove all folders matching
+`~/.emacs.d/elpa/*-theme-140*`.
