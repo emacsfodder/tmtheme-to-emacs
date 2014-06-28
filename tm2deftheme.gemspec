@@ -6,12 +6,12 @@ require 'tm2deftheme/version'
 Gem::Specification.new do |s|
   s.name        = "tm2deftheme"
   s.version     = TmthemeToDeftheme::VERSION
-  s.date        = "2014-06-27"
+  s.date        = "2014-06-28"
   s.summary     = "Convert .tmTheme to Emacs 24 deftheme .el"
   s.description = "Convert TextMate/SublimeText .tmTheme to Emacs 24 deftheme .el"
   s.authors     = ["Jason Milkins"]
   s.email       = ["jasonm23@gmail.com"]
-  s.files       = Dir['lib/*.rb'] + Dir['lib/*.yml'] + Dir['bin/*'] + Dir['templates/*'] + %W(README.md LICENSE)
+  s.files       = Dir['lib/*.rb'] + Dir['data/*'] + Dir['bin/*'] + Dir['templates/*'] + %W(README.md LICENSE)
   s.homepage    = "https://github.com/emacsfodder/tmtheme-to-deftheme"
   s.license     = "GPL3"
 

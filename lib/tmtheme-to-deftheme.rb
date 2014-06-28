@@ -7,7 +7,7 @@ module TmthemeToDeftheme
 
   class Main
 
-    SCOPE_MAP = YAML.load_file(File.join(File.dirname(__FILE__),'scopes-to-faces.yml'))
+    SCOPE_MAP = YAML.load_file(File.join(File.dirname(__FILE__),'..','data','scopes-to-faces.yml'))
     TM_SCOPES = SCOPE_MAP.map(&:first).map(&:strip)
     EMACS_FACES = SCOPE_MAP.map(&:last).map(&:strip)
 
