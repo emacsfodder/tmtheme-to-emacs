@@ -1,7 +1,7 @@
 ;;; twilight-theme.el --- an Emacs 24 theme based on Twilight (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403919006
+;;; Version: 1403933415
 ;;; Original author: Michael Sheets
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme twilight
-  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-28 09:30:06 +0800")
+  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-28 13:30:15 +0800")
 
 (custom-theme-set-variables
  'twilight
@@ -38,7 +38,7 @@
 
  '(trailing-whitespace                 ((t (:foreground "#FFFFFF"  :background "#C74000"                                               ))))
  '(link                                ((t (:foreground "#00b7f0"  :background nil       :underline t                                  ))))
- '(link-visited                        ((t (:foreground "#4488cc"                       :underline t :inherit (link)                  ))))
+ '(link-visited                        ((t (:foreground "#4488cc"                        :underline t :inherit (link)                  ))))
  '(button                              ((t (:foreground "#FFFFFF"  :background "#444444" :underline t :inherit (link)                  ))))
  '(next-error                          ((t (                                             :inherit (region)                             ))))
  '(query-replace                       ((t (                                             :inherit (isearch)                            ))))
@@ -47,6 +47,7 @@
  '(mode-line-highlight                 ((t (                                             :box nil                                      ))))
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
+
  '(mode-line-inactive                  ((t (:foreground "#c6c6c6"  :background "#131313" :box nil :weight light :inherit (mode-line)   ))))
  '(mode-line                           ((t (:foreground "#f8f8f8"  :background "#0e0e0e" :box nil ))))
 
