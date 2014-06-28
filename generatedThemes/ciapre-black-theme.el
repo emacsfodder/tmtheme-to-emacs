@@ -1,7 +1,7 @@
 ;;; ciapre-black-theme.el --- an Emacs 24 theme based on Ciapre Black (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403947053
+;;; Version: 1403956047
 ;;; Original author: Vinh Nguyen
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme ciapre-black
-  "ciapre-black-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:33 +0800")
+  "ciapre-black-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:27 +0800")
 
 (custom-theme-set-variables
  'ciapre-black

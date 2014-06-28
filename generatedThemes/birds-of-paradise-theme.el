@@ -1,7 +1,7 @@
 ;;; birds-of-paradise-theme.el --- an Emacs 24 theme based on Birds of Paradise (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403947052
+;;; Version: 1403956046
 ;;; Original author: Joe Bergantine
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme birds-of-paradise
-  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:32 +0800")
+  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:26 +0800")
 
 (custom-theme-set-variables
  'birds-of-paradise

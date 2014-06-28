@@ -13,14 +13,15 @@ module TmthemeToDeftheme
 
     def initialize theme_filename, options
 
+      @theme_filename = theme_filename
       @options = options.to_hash
-      @plist = Plist4r.open theme_filename
+      @plist = Plist4r.open @theme_filename
       rendered_theme = convert
 
       if @options[:f]
         deftheme_filename = "#{@long_theme_name}.el"
         unless @options[:s]
-          $stderr.puts "Converting #{theme_filename} to #{deftheme_filename}"
+          $stderr.puts "Converting #{@theme_filename} to #{deftheme_filename}"
         end
         if File.exist? deftheme_filename
           unless @options[:o]
@@ -94,9 +95,15 @@ module TmthemeToDeftheme
         c = Color::RGB.from_html hexcolor[0,7]
         a = hexcolor[7,2].to_i(16).to_f
         p = (a / 255.0) * 100.0
-        c.mix_with(@base_bg, p).html
-      elsif hexcolor.length == 7
+        unless @base_bg.nil?
+          c.mix_with(@base_bg, p).html
+        else
+          c.html
+        end
+      elsif hexcolor.length == 7 || hexcolor.length == 4
         hexcolor
+      else
+        $stderr.puts "There was an error processing #{@theme_filename} - could not read color: #{hexcolor}"
       end
     end
 
@@ -152,24 +159,24 @@ module TmthemeToDeftheme
     end
 
     def convert
+      debug_out "- tmTheme scope settings --------------------"
+      debug_out @plist["settings"].to_yaml
 
-      @base_settings = @plist["settings"].first["settings"]
-      @base_bg = Color::RGB.from_html @base_settings["background"]
-      @base_fg = Color::RGB.from_html @base_settings["foreground"]
+      @author          = @plist["author"]
+      @name            = @plist["name"]
+      @theme_name      = "#{@plist["name"]}".downcase.tr ' _', '-'
+      @long_theme_name = "#{@theme_name}-theme"
+      @base_settings   = @plist["settings"].first["settings"]
+      @base_bg_hex     = fix_rgba @base_settings["background"]
+      @base_bg         = Color::RGB.from_html @base_bg_hex
+      @base_fg_hex     = fix_rgba @base_settings["foreground"]
+      @base_fg         = Color::RGB.from_html @base_fg_hex
 
       if lighttheme?
         debug_out "- Converting : Light Theme ----------------"
       else
         debug_out "- Converting : Dark Theme ----------------"
       end
-
-      @author = @plist["author"]
-      @name = @plist["name"]
-      @theme_name = "#{@plist["name"]}".downcase.tr ' _', '-'
-      @long_theme_name = "#{@theme_name}-theme"
-
-      debug_out "- tmTheme scope settings --------------------"
-      debug_out @plist["settings"].to_yaml
 
       @emacs_faces = @plist["settings"].collect{|s| map_scope_to_emacslisp(s) if s["scope"] }.compact
 

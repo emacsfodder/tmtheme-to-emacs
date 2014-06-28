@@ -1,7 +1,7 @@
 ;;; bone-a-kite-theme.el --- an Emacs 24 theme based on Bone-a-kite (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403947053
+;;; Version: 1403956047
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme bone-a-kite
-  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:33 +0800")
+  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-28 19:47:27 +0800")
 
 (custom-theme-set-variables
  'bone-a-kite
