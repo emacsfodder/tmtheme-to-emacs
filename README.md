@@ -34,6 +34,17 @@ highlighing support, but `tm2deftheme` (currently) only maps to core
 `font-lock` faces. So while things won't look like a one-to-one copy,
 the results are still pretty good.
 
+Linum, fringe and modeline colours are derived from the base foreground 
+and background colors.  Support for [Rainbow Delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters) 
+is provided automatically.
+
+Here's how: The imported foreground colors which constrast most from the 
+background are averaged, from this average colour, 9 tint colors are generated and
+assigned to the `rainbow-delimiters-depth-n-face` collection.
+
+I'll be adding additional support for `js3-mode`, git-gutter, flyspell, 
+flymake, flycheck, isearch and more.
+
 ### Demo
 
 See for yourself, here's a handful of converted themes, shown in their
