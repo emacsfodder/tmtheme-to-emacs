@@ -17,8 +17,6 @@
 
 (custom-theme-set-variables
  '<%= @theme_name %>
- '(linum-format " %7i ")
- '(fringe-mode 5 nil (fringe))
 )
 
 (custom-theme-set-faces
@@ -35,7 +33,7 @@
  %>
  '(linum                               ((t (:foreground "<%= @base_bg.adjust_brightness(90).html %>"  :background "<%= @base_bg.adjust_brightness(30).html %>" ))))
  '(fringe                              ((t (                       :background "<%= @base_bg.adjust_brightness(30).html %>" ))))
- 
+
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
  '(highlight                           ((t (:foreground "orange"   :background nil                                                     ))))
@@ -51,29 +49,29 @@
 
  <%
  # Modeline is generated from base_fg / base_bg
- %>   
+ %>
  '(mode-line-highlight                 ((t (                                             :box nil                                      ))))
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
  '(mode-line-inactive                  ((t (:foreground "<%= @base_fg.adjust_brightness(-20).html %>"  :background "<%= @base_bg.adjust_brightness(-20).html %>" :box nil :weight light :inherit (mode-line)   ))))
  '(mode-line                           ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.adjust_brightness(-40).html %>" :box nil ))))
- 
+
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))
  '(lazy-highlight                      ((t (                       :background "#77bbdd"                                               ))))
  '(match                               ((t (                       :background "#3388cc"                                               ))))
- 
+
  '(tooltip                             ((t (:foreground "black"    :background "LightYellow" :inherit (variable-pitch)                 ))))
- 
+
  '(js3-function-param-face             ((t (:foreground "#BFC3A9"                                                                      ))))
  '(js3-external-variable-face          ((t (:foreground "#F0B090"  :bold t                                                             ))))
- 
+
  <%
  # TODO: Generate cua-rectangle and secondary-selection from region/selection import
  %>
  '(secondary-selection                 ((t (                       :background "#342858"                                               ))))
  '(cua-rectangle                       ((t (:foreground "#E0E4CC"  :background "#342858" ))))
- 
+
  ;; Magit hightlight
  '(magit-item-highlight                ((t (:foreground "white" :background "#1278A8" :inherit nil ))))
 
@@ -99,7 +97,7 @@
  '(diff-context                        ((t (:foreground "#E0E4CC"))))
  '(diff-changed                        ((t (:foreground "#3388cc"))))
  '(diff-hunk-header                    ((t (:background "#242130"))))
- 
+
 <%
 # TODO: defaults should be overriden when the @emacs_faces below
 # are evaluated, it'd be much cleaner if we managed it a better
