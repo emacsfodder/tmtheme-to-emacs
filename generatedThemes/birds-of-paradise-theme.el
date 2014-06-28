@@ -1,7 +1,7 @@
 ;;; birds-of-paradise-theme.el --- an Emacs 24 theme based on Birds of Paradise (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937702
+;;; Version: 1403947052
 ;;; Original author: Joe Bergantine
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme birds-of-paradise
-  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:42 +0800")
+  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:32 +0800")
 
 (custom-theme-set-variables
  'birds-of-paradise
@@ -23,7 +23,7 @@
  'birds-of-paradise
  ;; basic theming.
 
- '(default ((t (:foreground "#E6E1C4" :background "#372725"))))
+ '(default ((t (:foreground "#E6E1C4" :background "#372725" ))))
  '(region  ((t (:background "#1E1C1C"))))
  '(cursor  ((t (:background "#DDDDDD"))))
 
@@ -88,19 +88,19 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#6B4E32" ))))
- '(font-lock-constant-face ((t (:foreground "#6C99BB" ))))
- '(font-lock-type-face ((t (:foreground "#EFAC32" ))))
- '(font-lock-keyword-face ((t (:foreground "#EF5D32" ))))
- '(font-lock-string-face ((t (:foreground "#D9D762" ))))
- '(font-lock-variable-name-face ((t (:foreground "#7DAF9C" ))))
- '(font-lock-warning-face ((t (:foreground "#CC4232" ))))
- '(error ((t (:foreground "#E6E1C4" :background "#CC4232"))))
- '(font-lock-preprocessor-face ((t (:foreground "#8996A8" ))))
- '(diff-removed ((t (:foreground "#F8F8F8" :background "#420E09"))))
- '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D"))))
- '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#6B4E32" ))))
+ '(font-lock-comment-face ((t (:foreground "#6B4E32"  :italic t))))
+ '(font-lock-constant-face ((t (:foreground "#6C99BB"  ))))
+ '(font-lock-type-face ((t (:foreground "#EFAC32"  ))))
+ '(font-lock-keyword-face ((t (:foreground "#EF5D32"  ))))
+ '(font-lock-string-face ((t (:foreground "#D9D762"  :italic t))))
+ '(font-lock-variable-name-face ((t (:foreground "#7DAF9C"  ))))
+ '(font-lock-warning-face ((t (:foreground "#CC4232"  :italic t :underline t))))
+ '(error ((t (:foreground "#E6E1C4" :background "#CC4232" ))))
+ '(font-lock-preprocessor-face ((t (:foreground "#8996A8"  ))))
+ '(diff-removed ((t (:foreground "#F8F8F8" :background "#420E09" ))))
+ '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D" ))))
+ '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22" ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#6B4E32"  :italic t))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#a84223"))))

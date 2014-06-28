@@ -1,7 +1,7 @@
 ;;; earthsong-light-theme.el --- an Emacs 24 theme based on Earthsong Light (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937710
+;;; Version: 1403947058
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme earthsong-light
-  "earthsong-light-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:50 +0800")
+  "earthsong-light-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:38 +0800")
 
 (custom-theme-set-variables
  'earthsong-light
@@ -23,7 +23,7 @@
  'earthsong-light
  ;; basic theming.
 
- '(default ((t (:foreground "#4d463e" :background "#ffffff"))))
+ '(default ((t (:foreground "#4d463e" :background "#ffffff" ))))
  '(region  ((t (:background "#60A365"))))
  '(cursor  ((t (:background "#111111"))))
 
@@ -88,18 +88,18 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#d6cab9" ))))
- '(font-lock-string-face ((t (:foreground "#F8BB39" ))))
- '(font-lock-builtin-face ((t (:foreground "#DB784D" ))))
- '(font-lock-variable-name-face ((t ( ))))
- '(font-lock-keyword-face ((t (:foreground "#DB784D" ))))
- '(font-lock-type-face ((t (:foreground "#DB784D" ))))
- '(font-lock-function-name-face ((t (:foreground "#60A365" ))))
- '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#00a8c6"))))
- '(diff-removed ((t (:foreground "#00A8C6" ))))
- '(diff-added ((t (:foreground "#A6E22E" ))))
- '(diff-changed ((t (:foreground "#E6DB74" ))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#d6cab9" ))))
+ '(font-lock-comment-face ((t (:foreground "#d6cab9"  ))))
+ '(font-lock-string-face ((t (:foreground "#F8BB39"  ))))
+ '(font-lock-builtin-face ((t (:foreground "#DB784D"  ))))
+ '(font-lock-variable-name-face ((t (  ))))
+ '(font-lock-keyword-face ((t (:foreground "#DB784D"  ))))
+ '(font-lock-type-face ((t (:foreground "#DB784D"  :underline t))))
+ '(font-lock-function-name-face ((t (:foreground "#60A365"  ))))
+ '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#00a8c6" ))))
+ '(diff-removed ((t (:foreground "#00A8C6"  ))))
+ '(diff-added ((t (:foreground "#A6E22E"  ))))
+ '(diff-changed ((t (:foreground "#E6DB74"  ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#d6cab9"  ))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#01768b"))))

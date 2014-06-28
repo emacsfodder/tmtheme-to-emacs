@@ -1,7 +1,7 @@
 ;;; rhuk-theme.el --- an Emacs 24 theme based on Rhuk (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937707
+;;; Version: 1403947055
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme rhuk
-  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:47 +0800")
+  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:35 +0800")
 
 (custom-theme-set-variables
  'rhuk
@@ -23,7 +23,7 @@
  'rhuk
  ;; basic theming.
 
- '(default ((t (:foreground "#e6e2da" :background "#222222"))))
+ '(default ((t (:foreground "#e6e2da" :background "#222222" ))))
  '(region  ((t (:background "#49483E"))))
  '(cursor  ((t (:background "#F8F8F0"))))
 
@@ -88,18 +88,18 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#686760" ))))
- '(font-lock-string-face ((t (:foreground "#E6DB74" ))))
- '(font-lock-builtin-face ((t (:foreground "#fdc51a" ))))
- '(font-lock-variable-name-face ((t ( ))))
- '(font-lock-keyword-face ((t (:foreground "#ff6814" ))))
- '(font-lock-type-face ((t (:foreground "#e1861c" ))))
- '(font-lock-function-name-face ((t (:foreground "#e1861c" ))))
- '(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#fdc51a"))))
- '(diff-removed ((t (:foreground "#ff6814" ))))
- '(diff-added ((t (:foreground "#e1861c" ))))
- '(diff-changed ((t (:foreground "#E6DB74" ))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#686760" ))))
+ '(font-lock-comment-face ((t (:foreground "#686760"  ))))
+ '(font-lock-string-face ((t (:foreground "#E6DB74"  ))))
+ '(font-lock-builtin-face ((t (:foreground "#fdc51a"  ))))
+ '(font-lock-variable-name-face ((t (  ))))
+ '(font-lock-keyword-face ((t (:foreground "#ff6814"  ))))
+ '(font-lock-type-face ((t (:foreground "#e1861c"  :underline t))))
+ '(font-lock-function-name-face ((t (:foreground "#e1861c"  ))))
+ '(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#fdc51a" ))))
+ '(diff-removed ((t (:foreground "#ff6814"  ))))
+ '(diff-added ((t (:foreground "#e1861c"  ))))
+ '(diff-changed ((t (:foreground "#E6DB74"  ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#686760"  ))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#b3490e"))))

@@ -1,7 +1,7 @@
 ;;; bone-a-kite-theme.el --- an Emacs 24 theme based on Bone-a-kite (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937703
+;;; Version: 1403947053
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme bone-a-kite
-  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:43 +0800")
+  "bone-a-kite-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:33 +0800")
 
 (custom-theme-set-variables
  'bone-a-kite
@@ -23,7 +23,7 @@
  'bone-a-kite
  ;; basic theming.
 
- '(default ((t (:foreground "#F8F8F2" :background "#1c1e20"))))
+ '(default ((t (:foreground "#F8F8F2" :background "#1c1e20" ))))
  '(region  ((t (:background "#333333"))))
  '(cursor  ((t (:background "#F8F8F0"))))
 
@@ -88,15 +88,15 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#75715E" :background "#222424"))))
- '(font-lock-string-face ((t (:foreground "#E6DB74" :background "#2a2b26"))))
- '(font-lock-builtin-face ((t (:foreground "#AE81FF" :background "#262530"))))
- '(font-lock-variable-name-face ((t (:foreground "#F88767" :background "#2c2525"))))
- '(font-lock-keyword-face ((t (:foreground "#F92672" :background "#2c1f26"))))
- '(font-lock-type-face ((t (:foreground "#A6E22E" :background "#262c21"))))
- '(font-lock-function-name-face ((t (:foreground "#A6E22E" :background "#262c21"))))
- '(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#AE81FF"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#75715E" :background "#222424"))))
+ '(font-lock-comment-face ((t (:foreground "#75715E" :background "#222424" ))))
+ '(font-lock-string-face ((t (:foreground "#E6DB74" :background "#2a2b26" ))))
+ '(font-lock-builtin-face ((t (:foreground "#AE81FF" :background "#262530" ))))
+ '(font-lock-variable-name-face ((t (:foreground "#F88767" :background "#2c2525" ))))
+ '(font-lock-keyword-face ((t (:foreground "#F92672" :background "#2c1f26" ))))
+ '(font-lock-type-face ((t (:foreground "#A6E22E" :background "#262c21" :underline t))))
+ '(font-lock-function-name-face ((t (:foreground "#A6E22E" :background "#262c21" ))))
+ '(font-lock-warning-face ((t (:foreground "#F8F8F0" :background "#AE81FF" ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#75715E" :background "#222424" ))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#7a5bb3"))))

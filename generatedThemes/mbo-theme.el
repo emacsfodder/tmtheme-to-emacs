@@ -1,7 +1,7 @@
 ;;; mbo-theme.el --- an Emacs 24 theme based on mbo (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937711
+;;; Version: 1403947058
 ;;; Original author: Marko Bonaci
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme mbo
-  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:51 +0800")
+  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:38 +0800")
 
 (custom-theme-set-variables
  'mbo
@@ -23,7 +23,7 @@
  'mbo
  ;; basic theming.
 
- '(default ((t (:foreground "#ffffe9" :background "#2c2c2c"))))
+ '(default ((t (:foreground "#ffffe9" :background "#2c2c2c" ))))
  '(region  ((t (:background "#716C62"))))
  '(cursor  ((t (:background "#ffffec"))))
 
@@ -88,18 +88,18 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#655e25" ))))
- '(font-lock-string-face ((t (:foreground "#ffcf6c" ))))
- '(font-lock-builtin-face ((t (:foreground "#ffcf6c" ))))
- '(font-lock-variable-name-face ((t ( ))))
- '(font-lock-keyword-face ((t (:foreground "#ffcf6c" ))))
- '(font-lock-type-face ((t (:foreground "#ffffe9" ))))
- '(font-lock-function-name-face ((t (:foreground "#00a8c6" ))))
- '(font-lock-warning-face ((t (:foreground "#ffffed" :background "#004b59"))))
- '(diff-removed ((t (:foreground "#484032" ))))
- '(diff-added ((t (:foreground "#f6dbaa" ))))
- '(diff-changed ((t (:foreground "#ffffdc" ))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#655e25" ))))
+ '(font-lock-comment-face ((t (:foreground "#655e25"  ))))
+ '(font-lock-string-face ((t (:foreground "#ffcf6c"  ))))
+ '(font-lock-builtin-face ((t (:foreground "#ffcf6c"  ))))
+ '(font-lock-variable-name-face ((t (  ))))
+ '(font-lock-keyword-face ((t (:foreground "#ffcf6c"  ))))
+ '(font-lock-type-face ((t (:foreground "#ffffe9"  ))))
+ '(font-lock-function-name-face ((t (:foreground "#00a8c6"  ))))
+ '(font-lock-warning-face ((t (:foreground "#ffffed" :background "#004b59" ))))
+ '(diff-removed ((t (:foreground "#484032"  ))))
+ '(diff-added ((t (:foreground "#f6dbaa"  ))))
+ '(diff-changed ((t (:foreground "#ffffdc"  ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#655e25"  ))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#01778b"))))

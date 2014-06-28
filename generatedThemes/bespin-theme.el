@@ -1,7 +1,7 @@
 ;;; bespin-theme.el --- an Emacs 24 theme based on Bespin (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937701
+;;; Version: 1403947051
 ;;; Original author: Michael Diolosa
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme bespin
-  "bespin-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:41 +0800")
+  "bespin-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:31 +0800")
 
 (custom-theme-set-variables
  'bespin
@@ -23,7 +23,7 @@
  'bespin
  ;; basic theming.
 
- '(default ((t (:foreground "#BAAE9E" :background "#28211C"))))
+ '(default ((t (:foreground "#BAAE9E" :background "#28211C" ))))
  '(region  ((t (:background "#DDF0FF33"))))
  '(cursor  ((t (:background "#A7A7A7"))))
 
@@ -88,19 +88,19 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#666666" ))))
- '(font-lock-constant-face ((t (:foreground "#CF6A4C" ))))
- '(font-lock-type-face ((t (:foreground "#937121" ))))
- '(font-lock-keyword-face ((t (:foreground "#5EA6EA" ))))
- '(font-lock-string-face ((t (:foreground "#54BE0D" ))))
- '(font-lock-variable-name-face ((t (:foreground "#7587A6" ))))
- '(font-lock-warning-face ((t (:foreground "#D2A8A1" ))))
- '(error ((t (:foreground "#F8F8F8" :background "#4a2a47"))))
- '(font-lock-preprocessor-face ((t (:foreground "#8996A8" ))))
- '(diff-removed ((t (:foreground "#F8F8F8" :background "#420E09"))))
- '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D"))))
- '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#666666" ))))
+ '(font-lock-comment-face ((t (:foreground "#666666"  :italic t))))
+ '(font-lock-constant-face ((t (:foreground "#CF6A4C"  ))))
+ '(font-lock-type-face ((t (:foreground "#937121"  ))))
+ '(font-lock-keyword-face ((t (:foreground "#5EA6EA"  ))))
+ '(font-lock-string-face ((t (:foreground "#54BE0D"  ))))
+ '(font-lock-variable-name-face ((t (:foreground "#7587A6"  ))))
+ '(font-lock-warning-face ((t (:foreground "#D2A8A1"  :italic t :underline t))))
+ '(error ((t (:foreground "#F8F8F8" :background "#4a2a47" ))))
+ '(font-lock-preprocessor-face ((t (:foreground "#8996A8"  ))))
+ '(diff-removed ((t (:foreground "#F8F8F8" :background "#420E09" ))))
+ '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D" ))))
+ '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22" ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#666666"  :italic t))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#924b36"))))

@@ -1,7 +1,7 @@
 ;;; twilight-theme.el --- an Emacs 24 theme based on Twilight (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937709
+;;; Version: 1403947057
 ;;; Original author: Michael Sheets
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme twilight
-  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:49 +0800")
+  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:37 +0800")
 
 (custom-theme-set-variables
  'twilight
@@ -23,7 +23,7 @@
  'twilight
  ;; basic theming.
 
- '(default ((t (:foreground "#F8F8F8" :background "#181818"))))
+ '(default ((t (:foreground "#F8F8F8" :background "#181818" ))))
  '(region  ((t (:background "#DDF0FF33"))))
  '(cursor  ((t (:background "#A7A7A7"))))
 
@@ -88,19 +88,19 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#5F5A60" ))))
- '(font-lock-constant-face ((t (:foreground "#CF6A4C" ))))
- '(font-lock-type-face ((t (:foreground "#9B703F" ))))
- '(font-lock-keyword-face ((t (:foreground "#CDA869" ))))
- '(font-lock-string-face ((t (:foreground "#8F9D6A" ))))
- '(font-lock-variable-name-face ((t (:foreground "#7587A6" ))))
- '(font-lock-warning-face ((t (:foreground "#D2A8A1" ))))
- '(error ((t (:foreground "#F8F8F8" :background "#462846"))))
- '(font-lock-preprocessor-face ((t (:foreground "#8996A8" ))))
- '(diff-removed ((t (:foreground "#F8F8F8" :background "#420E09"))))
- '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D"))))
- '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#5F5A60" ))))
+ '(font-lock-comment-face ((t (:foreground "#5F5A60"  :italic t))))
+ '(font-lock-constant-face ((t (:foreground "#CF6A4C"  ))))
+ '(font-lock-type-face ((t (:foreground "#9B703F"  ))))
+ '(font-lock-keyword-face ((t (:foreground "#CDA869"  ))))
+ '(font-lock-string-face ((t (:foreground "#8F9D6A"  ))))
+ '(font-lock-variable-name-face ((t (:foreground "#7587A6"  ))))
+ '(font-lock-warning-face ((t (:foreground "#D2A8A1"  :italic t :underline t))))
+ '(error ((t (:foreground "#F8F8F8" :background "#462846" ))))
+ '(font-lock-preprocessor-face ((t (:foreground "#8996A8"  ))))
+ '(diff-removed ((t (:foreground "#F8F8F8" :background "#420E09" ))))
+ '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D" ))))
+ '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22" ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#5F5A60"  :italic t))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#6d4f2d"))))

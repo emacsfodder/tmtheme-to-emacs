@@ -40,13 +40,13 @@ module TmthemeToDeftheme
 
     def lookup_scope scope
 
-      if scope.index(",")
+      if scope.index ","
         names = scope.split(",").map(&:strip)
         debug_out names
         first_match = names.map{|n| TM_SCOPES.find_index n}.compact.first
       else
         debug_out scope
-        first_match = TM_SCOPES.find_index(scope)
+        first_match = TM_SCOPES.find_index scope
       end
 
       if first_match.nil?
@@ -57,24 +57,27 @@ module TmthemeToDeftheme
       end
     end
 
-    def make_attr(s, k)
+    def make_attr s, k
       debug_out "Make attrs: #{s[:face]} : #{k} : #{s} : #{s[k]}"
       ":#{k} \"#{s[k]}\"" if s[k]
     end
 
-    # TODO: Extend to allow more attributes (bold, italic etc.)
-    # Check what tmTheme allows.
-
-    def face_attrs(s)
-      "#{make_attr(s, "foreground")} #{make_attr(s, "background")}"
+    def italic_underline_bold s
+      if s["fontStyle"]
+        s["fontStyle"].split(" ").map{|i| ":#{i} t" }.join " "
+      end
     end
 
-    def map_scope_to_emacslisp(hash)
+    def face_attrs s
+      "#{make_attr s, "foreground"} #{make_attr s, "background"} #{italic_underline_bold s}"
+    end
+
+    def map_scope_to_emacslisp hash
       emacs_face = lookup_scope hash["scope"]
       settings = hash["settings"]
       return nil if emacs_face.nil?
       mapped_scope = {face: emacs_face, settings: settings, scope: hash["scope"]}
-      debug_out(mapped_scope)
+      debug_out mapped_scope
       mapped_scope
     end
 
@@ -88,7 +91,7 @@ module TmthemeToDeftheme
 
     def fix_rgba hexcolor
       if hexcolor.length == 9
-        c = Color::RGB.from_html(hexcolor[0,7])
+        c = Color::RGB.from_html hexcolor[0,7]
         a = hexcolor[7,2].to_i(16).to_f
         p = (a / 255.0) * 100.0
         c.mix_with(@base_bg, p).html
@@ -162,7 +165,7 @@ module TmthemeToDeftheme
 
       @author = @plist["author"]
       @name = @plist["name"]
-      @theme_name = "#{@plist["name"]}".downcase.tr(' _', '-')
+      @theme_name = "#{@plist["name"]}".downcase.tr ' _', '-'
       @long_theme_name = "#{@theme_name}-theme"
 
       debug_out "- tmTheme scope settings --------------------"
@@ -197,7 +200,15 @@ module TmthemeToDeftheme
     end
 
     def render
-      Erubis::Eruby.new(File.read(File.join(File.dirname(__FILE__),'..','templates','deftheme.eruby'))).result(binding())
+      Erubis::Eruby.new(
+                        File.read(
+                                  File.join(
+                                            File.dirname(__FILE__),
+                                            '..',
+                                            'templates',
+                                            'deftheme.eruby'
+                                            )))
+        .result binding
     end
 
   end

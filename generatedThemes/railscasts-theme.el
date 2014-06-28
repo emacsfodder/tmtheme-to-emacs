@@ -1,7 +1,7 @@
 ;;; railscasts-theme.el --- an Emacs 24 theme based on RailsCasts (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403937706
+;;; Version: 1403947055
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme railscasts
-  "railscasts-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:46 +0800")
+  "railscasts-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:35 +0800")
 
 (custom-theme-set-variables
  'railscasts
@@ -23,7 +23,7 @@
  'railscasts
  ;; basic theming.
 
- '(default ((t (:foreground "#E6E1DC" :background "#2B2B2B"))))
+ '(default ((t (:foreground "#E6E1DC" :background "#2B2B2B" ))))
  '(region  ((t (:background "#5A647EE0"))))
  '(cursor  ((t (:background "#FFFFFF"))))
 
@@ -88,15 +88,15 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#BC9458" ))))
- '(font-lock-keyword-face ((t (:foreground "#CC7833" ))))
- '(font-lock-function-name-face ((t (:foreground "#FFC66D" ))))
- '(font-lock-constant-face ((t (:foreground "#6D9CBE" ))))
- '(font-lock-builtin-face ((t (:foreground "#6E9CBE" ))))
- '(font-lock-string-face ((t (:foreground "#A5C261" ))))
- '(diff-added ((t (:foreground "#E6E1DC" :background "#144212"))))
- '(diff-removed ((t (:foreground "#E6E1DC" :background "#660000"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#BC9458" ))))
+ '(font-lock-comment-face ((t (:foreground "#BC9458"  :italic t))))
+ '(font-lock-keyword-face ((t (:foreground "#CC7833"  ))))
+ '(font-lock-function-name-face ((t (:foreground "#FFC66D"  ))))
+ '(font-lock-constant-face ((t (:foreground "#6D9CBE"  ))))
+ '(font-lock-builtin-face ((t (:foreground "#6E9CBE"  ))))
+ '(font-lock-string-face ((t (:foreground "#A5C261"  ))))
+ '(diff-added ((t (:foreground "#E6E1DC" :background "#144212" ))))
+ '(diff-removed ((t (:foreground "#E6E1DC" :background "#660000" ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#BC9458"  :italic t))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#8f5524"))))

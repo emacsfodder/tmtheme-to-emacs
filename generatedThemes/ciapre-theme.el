@@ -1,7 +1,7 @@
 ;;; ciapre-theme.el --- an Emacs 24 theme based on Ciapre (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403942401
+;;; Version: 1403947054
 ;;; Original author: Vinh Nguyen
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme ciapre
-  "ciapre-theme - Created by tmtheme-to-deftheme - 2014-06-28 16:00:01 +0800")
+  "ciapre-theme - Created by tmtheme-to-deftheme - 2014-06-28 17:17:34 +0800")
 
 (custom-theme-set-variables
  'ciapre
@@ -23,7 +23,7 @@
  'ciapre
  ;; basic theming.
 
- '(default ((t (:foreground "#C2B790" :background "#1F2433"))))
+ '(default ((t (:foreground "#C2B790" :background "#1F2433" ))))
  '(region  ((t (:background "#1B324A"))))
  '(cursor  ((t (:background "#A89770"))))
 
@@ -88,13 +88,13 @@
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
 
- '(font-lock-comment-face ((t (:foreground "#696969" ))))
- '(font-lock-keyword-face ((t (:foreground "#C24D43" ))))
- '(font-lock-constant-face ((t (:foreground "#C24D43" ))))
- '(font-lock-builtin-face ((t (:foreground "#DB592E" ))))
- '(font-lock-string-face ((t (:foreground "#BAB972" ))))
- '(font-lock-function-name-face ((t (:foreground "#DEA050" ))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#696969" ))))
+ '(font-lock-comment-face ((t (:foreground "#696969"  ))))
+ '(font-lock-keyword-face ((t (:foreground "#C24D43"  ))))
+ '(font-lock-constant-face ((t (:foreground "#C24D43"  ))))
+ '(font-lock-builtin-face ((t (:foreground "#DB592E"  ))))
+ '(font-lock-string-face ((t (:foreground "#BAB972"  ))))
+ '(font-lock-function-name-face ((t (:foreground "#DEA050"  ))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "#696969"  ))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#9a3f20"))))
