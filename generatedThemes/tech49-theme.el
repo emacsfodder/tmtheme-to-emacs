@@ -1,7 +1,7 @@
 ;;; tech49-theme.el --- an Emacs 24 theme based on Tech49 (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403933414
+;;; Version: 1403937708
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme tech49
-  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-28 13:30:14 +0800")
+  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:48 +0800")
 
 (custom-theme-set-variables
  'tech49
@@ -28,8 +28,8 @@
  '(cursor  ((t (:background "#a1e4f2"))))
 
  ;; Temporary defaults
- '(linum                               ((t (:foreground "#000000"  :background "#000000" ))))
- '(fringe                              ((t (                       :background "#000000" ))))
+ '(linum                               ((t (:foreground "#222929"  :background "#111514" ))))
+ '(fringe                              ((t (                       :background "#111514" ))))
 
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
@@ -48,8 +48,8 @@
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
 
- '(mode-line-inactive                  ((t (:foreground "#7cb2ad"  :background "#000000" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "#accecb"  :background "#000000" :box nil ))))
+ '(mode-line-inactive                  ((t (:foreground "#7cb2ad"  :background "#111514" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "#accecb"  :background "#111514" :box nil ))))
 
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))

@@ -1,7 +1,7 @@
 ;;; twilight-theme.el --- an Emacs 24 theme based on Twilight (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403933415
+;;; Version: 1403937709
 ;;; Original author: Michael Sheets
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme twilight
-  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-28 13:30:15 +0800")
+  "twilight-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:49 +0800")
 
 (custom-theme-set-variables
  'twilight
@@ -28,8 +28,8 @@
  '(cursor  ((t (:background "#A7A7A7"))))
 
  ;; Temporary defaults
- '(linum                               ((t (:foreground "#2e2e2e"  :background "#1f1f1f" ))))
- '(fringe                              ((t (                       :background "#1f1f1f" ))))
+ '(linum                               ((t (:foreground "#454545"  :background "#2e2e2e" ))))
+ '(fringe                              ((t (                       :background "#2e2e2e" ))))
 
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
@@ -48,8 +48,8 @@
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
 
- '(mode-line-inactive                  ((t (:foreground "#c6c6c6"  :background "#131313" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "#f8f8f8"  :background "#0e0e0e" :box nil ))))
+ '(mode-line-inactive                  ((t (:foreground "#c6c6c6"  :background "#2e2e2e" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "#f8f8f8"  :background "#2e2e2e" :box nil ))))
 
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))

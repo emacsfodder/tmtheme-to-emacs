@@ -1,3 +1,5 @@
+<% # -*- mode: emacs-lisp -*-
+%>
 ;;; <%= @long_theme_name %>.el --- an Emacs 24 theme based on <%= @name %> (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
@@ -33,8 +35,8 @@
  %>
  <% if darktheme? %>
  <% debug_out "Dark theme linum/fringe"  %>
- '(linum                               ((t (:foreground "<%= @base_bg.adjust_brightness(90).html %>"  :background "<%= @base_bg.adjust_brightness(30).html %>" ))))
- '(fringe                              ((t (                       :background "<%= @base_bg.adjust_brightness(30).html %>" ))))
+ '(linum                               ((t (:foreground "<%= @base_bg.mix_with(@base_fg, 80).html %>"  :background "<%= @base_bg.mix_with(@base_fg, 90).html %>" ))))
+ '(fringe                              ((t (                       :background "<%= @base_bg.mix_with(@base_fg, 90).html %>" ))))
  <% else %>
  <% debug_out "Light theme linum/fringe"  %>
  '(linum                               ((t (:foreground "<%= @base_fg.adjust_brightness(90).html %>"  :background "<%= @base_bg.adjust_brightness(-30).html %>" ))))
@@ -63,8 +65,8 @@
 
 <% if darktheme? %>
  <% debug_out "Dark theme modeline"  %>
- '(mode-line-inactive                  ((t (:foreground "<%= @base_fg.adjust_brightness(-20).html %>"  :background "<%= @base_bg.adjust_brightness(-20).html %>" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.adjust_brightness(-40).html %>" :box nil ))))
+ '(mode-line-inactive                  ((t (:foreground "<%= @base_fg.adjust_brightness(-20).html %>"  :background "<%= @base_bg.mix_with(@base_fg, 90).html %>" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.mix_with(@base_fg, 90).html %>" :box nil ))))
 <% else %>
  <% debug_out "Light theme modeline"  %>
  '(mode-line-inactive                  ((t (:foreground "<%= @base_fg.html %>"  :background "<%= @base_bg.adjust_brightness(-10).html %>" :box nil :weight light :inherit (mode-line)   ))))

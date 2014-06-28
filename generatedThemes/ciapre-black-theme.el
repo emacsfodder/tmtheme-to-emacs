@@ -1,7 +1,7 @@
 ;;; ciapre-black-theme.el --- an Emacs 24 theme based on Ciapre Black (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403933409
+;;; Version: 1403937704
 ;;; Original author: Vinh Nguyen
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme ciapre-black
-  "ciapre-black-theme - Created by tmtheme-to-deftheme - 2014-06-28 13:30:09 +0800")
+  "ciapre-black-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:44 +0800")
 
 (custom-theme-set-variables
  'ciapre-black
@@ -28,8 +28,8 @@
  '(cursor  ((t (:background "#A89770"))))
 
  ;; Temporary defaults
- '(linum                               ((t (:foreground "#3b4461"  :background "#282f42" ))))
- '(fringe                              ((t (                       :background "#282f42" ))))
+ '(linum                               ((t (:foreground "#404146"  :background "#2f333c" ))))
+ '(fringe                              ((t (                       :background "#2f333c" ))))
 
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
@@ -48,8 +48,8 @@
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
 
- '(mode-line-inactive                  ((t (:foreground "#aa9b64"  :background "#191d29" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "#c2b790"  :background "#13161f" :box nil ))))
+ '(mode-line-inactive                  ((t (:foreground "#aa9b64"  :background "#2f333c" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "#c2b790"  :background "#2f333c" :box nil ))))
 
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))

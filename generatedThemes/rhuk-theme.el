@@ -1,7 +1,7 @@
 ;;; rhuk-theme.el --- an Emacs 24 theme based on Rhuk (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403933413
+;;; Version: 1403937707
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme rhuk
-  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-28 13:30:13 +0800")
+  "rhuk-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:47 +0800")
 
 (custom-theme-set-variables
  'rhuk
@@ -28,8 +28,8 @@
  '(cursor  ((t (:background "#F8F8F0"))))
 
  ;; Temporary defaults
- '(linum                               ((t (:foreground "#414141"  :background "#2c2c2c" ))))
- '(fringe                              ((t (                       :background "#2c2c2c" ))))
+ '(linum                               ((t (:foreground "#494847"  :background "#363534" ))))
+ '(fringe                              ((t (                       :background "#363534" ))))
 
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
@@ -48,8 +48,8 @@
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
 
- '(mode-line-inactive                  ((t (:foreground "#c2b8a5"  :background "#1b1b1b" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "#e6e2da"  :background "#141414" :box nil ))))
+ '(mode-line-inactive                  ((t (:foreground "#c2b8a5"  :background "#363534" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "#e6e2da"  :background "#363534" :box nil ))))
 
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))

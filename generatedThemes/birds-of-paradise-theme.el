@@ -1,7 +1,7 @@
 ;;; birds-of-paradise-theme.el --- an Emacs 24 theme based on Birds of Paradise (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403933407
+;;; Version: 1403937702
 ;;; Original author: Joe Bergantine
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme birds-of-paradise
-  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-28 13:30:07 +0800")
+  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-28 14:41:42 +0800")
 
 (custom-theme-set-variables
  'birds-of-paradise
@@ -28,8 +28,8 @@
  '(cursor  ((t (:background "#DDDDDD"))))
 
  ;; Temporary defaults
- '(linum                               ((t (:foreground "#694a46"  :background "#483330" ))))
- '(fringe                              ((t (                       :background "#483330" ))))
+ '(linum                               ((t (:foreground "#5a4c45"  :background "#483a35" ))))
+ '(fringe                              ((t (                       :background "#483a35" ))))
 
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
@@ -48,8 +48,8 @@
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
 
- '(mode-line-inactive                  ((t (:foreground "#cdc388"  :background "#2c1f1e" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "#e6e1c4"  :background "#211716" :box nil ))))
+ '(mode-line-inactive                  ((t (:foreground "#cdc388"  :background "#483a35" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "#e6e1c4"  :background "#483a35" :box nil ))))
 
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))
