@@ -1,7 +1,7 @@
 ;;; birds-of-paradise-theme.el --- an Emacs 24 theme based on Birds of Paradise (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403986463
+;;; Version: 1404021809
 ;;; Original author: Joe Bergantine
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme birds-of-paradise
-  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:23 +0800")
+  "birds-of-paradise-theme - Created by tmtheme-to-deftheme - 2014-06-29 14:03:29 +0800")
 
 (custom-theme-set-variables
  'birds-of-paradise
@@ -101,6 +101,7 @@
  '(diff-changed ((t (:foreground "#F8F8F8" :background "#4A410D" ))))
  '(diff-added ((t (:foreground "#F8F8F8" :background "#253B22" ))))
  '(js3-function-param-face ((t (:foreground "#7DAF9C"  ))))
+ '(js2-function-param ((t (:foreground "#7DAF9C"  ))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#6B4E32"  :italic t))))
 
 ;; Rainbow delimiters
@@ -112,7 +113,7 @@
  '(rainbow-delimiters-depth-6-face ((t (:foreground "#db7456"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#df8266"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#e29077"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#e69e88"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#e69d88"))))
  '(rainbow-delimiters-unmatched-face ((t (:foreground "#FF0000"))))
 ) ;; End face definitions
 

@@ -1,7 +1,7 @@
 ;;; tech49-theme.el --- an Emacs 24 theme based on Tech49 (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403986468
+;;; Version: 1404021814
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme tech49
-  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:28 +0800")
+  "tech49-theme - Created by tmtheme-to-deftheme - 2014-06-29 14:03:34 +0800")
 
 (custom-theme-set-variables
  'tech49

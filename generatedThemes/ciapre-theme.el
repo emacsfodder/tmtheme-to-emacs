@@ -1,7 +1,7 @@
 ;;; ciapre-theme.el --- an Emacs 24 theme based on Ciapre (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403986465
+;;; Version: 1404021811
 ;;; Original author: Vinh Nguyen
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme ciapre
-  "ciapre-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:25 +0800")
+  "ciapre-theme - Created by tmtheme-to-deftheme - 2014-06-29 14:03:31 +0800")
 
 (custom-theme-set-variables
  'ciapre
@@ -95,15 +95,16 @@
  '(font-lock-string-face ((t (:foreground "#BAB972"  ))))
  '(font-lock-function-name-face ((t (:foreground "#DEA050"  ))))
  '(js3-function-param-face ((t (:foreground "#6D948D"  ))))
+ '(js2-function-param ((t (:foreground "#6D948D"  ))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#696969"  ))))
 
 ;; Rainbow delimiters
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#9a3f20"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "#a94524"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#b94c27"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#b84b27"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "#c8522a"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "#d45a31"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#d76641"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#d76640"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#da7350"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#dd7f5f"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "#e18b6f"))))

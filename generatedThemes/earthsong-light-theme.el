@@ -1,7 +1,7 @@
 ;;; earthsong-light-theme.el --- an Emacs 24 theme based on Earthsong Light (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403986469
+;;; Version: 1404021815
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme earthsong-light
-  "earthsong-light-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:29 +0800")
+  "earthsong-light-theme - Created by tmtheme-to-deftheme - 2014-06-29 14:03:35 +0800")
 
 (custom-theme-set-variables
  'earthsong-light
@@ -96,6 +96,7 @@
  '(font-lock-type-face ((t (:foreground "#DB784D"  :underline t))))
  '(font-lock-function-name-face ((t (:foreground "#60A365"  ))))
  '(js3-function-param-face ((t (  :italic t))))
+ '(js2-function-param ((t (  :italic t))))
  '(font-lock-warning-face ((t (:foreground "#f8f8f0" :background "#00a8c6" ))))
  '(diff-removed ((t (:foreground "#00A8C6"  ))))
  '(diff-added ((t (:foreground "#A6E22E"  ))))

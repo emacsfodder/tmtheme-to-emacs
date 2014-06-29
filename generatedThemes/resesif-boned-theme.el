@@ -1,7 +1,7 @@
 ;;; resesif-boned-theme.el --- an Emacs 24 theme based on Resesif Boned (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403986466
+;;; Version: 1404021812
 ;;; Original author: 
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme resesif-boned
-  "resesif-boned-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:26 +0800")
+  "resesif-boned-theme - Created by tmtheme-to-deftheme - 2014-06-29 14:03:32 +0800")
 
 (custom-theme-set-variables
  'resesif-boned

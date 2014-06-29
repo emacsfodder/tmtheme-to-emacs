@@ -1,7 +1,7 @@
 ;;; mbo-theme.el --- an Emacs 24 theme based on mbo (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)
-;;; Version: 1403986470
+;;; Version: 1404021816
 ;;; Original author: Marko Bonaci
 ;;; Url: https://github.com/emacsfodder/tmtheme-to-deftheme
 ;;; Package-Requires: ((emacs "24.0"))
@@ -13,7 +13,7 @@
 ;;; Code:
 
 (deftheme mbo
-  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-29 04:14:30 +0800")
+  "mbo-theme - Created by tmtheme-to-deftheme - 2014-06-29 14:03:36 +0800")
 
 (custom-theme-set-variables
  'mbo
@@ -96,6 +96,7 @@
  '(font-lock-type-face ((t (:foreground "#ffffe9"  ))))
  '(font-lock-function-name-face ((t (:foreground "#00a8c6"  ))))
  '(js3-function-param-face ((t (:foreground "#ffcf6c"  ))))
+ '(js2-function-param ((t (:foreground "#ffcf6c"  ))))
  '(font-lock-warning-face ((t (:foreground "#ffffed" :background "#004b59" ))))
  '(diff-removed ((t (:foreground "#484032"  ))))
  '(diff-added ((t (:foreground "#f6dbaa"  ))))

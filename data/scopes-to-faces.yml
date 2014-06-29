@@ -35,14 +35,17 @@
 - - invalid.illegal
   - error
 
-# js3-mode
+# js3 and js2 mode
 
 - - keyword.other.documentation.param.javadoc
   - js3-jsdoc-tag-face
+  - js2-jsdoc-tag
 - - variable.parameter
   - js3-function-param-face
+  - js2-function-param
 - - variable.other.external-symbol
   - js3-external-variable-face
+  - js2-external-variable
 
 # GitGutter
 

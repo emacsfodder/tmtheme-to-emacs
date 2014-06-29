@@ -7,31 +7,35 @@ module TmthemeToDeftheme
 
   class Main
 
-    SCOPE_MAP = YAML.load_file(File.join(File.dirname(__FILE__),'..','data','scopes-to-faces.yml'))
-    TM_SCOPES = SCOPE_MAP.map(&:first).map(&:strip)
-    EMACS_FACES = SCOPE_MAP.map(&:last).map(&:strip)
+    SCOPE_MAP   = YAML.load_file(File.join(File.dirname(__FILE__),'..','data','scopes-to-faces.yml'))
+    TM_SCOPES   = SCOPE_MAP.map(&:first)
+    EMACS_FACES = SCOPE_MAP.map{|a| a[1..-1]}
 
     def initialize theme_filename, options
+      @theme_filename  = theme_filename
+      @options         = options
 
-      @theme_filename = theme_filename
-      @options = options.to_hash
-      @plist = Plist4r.open @theme_filename
-      rendered_theme = convert
+      @plist           = Plist4r.open @theme_filename
+      @author          = @plist["author"]
+      @name            = @plist["name"]
+      @theme_name      = "#{@plist["name"]}".downcase.tr ' _', '-'
+      @long_theme_name = "#{@theme_name}-theme"
 
       if @options[:f]
-        deftheme_filename = "#{@long_theme_name}.el"
+        @deftheme_filename = "#{@long_theme_name}.el"
+        puts "DEFTHEME NAME : #{@deftheme_filename}"
         unless @options[:s]
-          $stderr.puts "Creating: #{deftheme_filename}"
+          $stderr.puts "Creating: #{@deftheme_filename}"
         end
-        if File.exist? deftheme_filename
+        if File.exist? @deftheme_filename
           unless @options[:o]
-            $stderr.puts "#{deftheme_filename} already exists, use -o to force overwrite"
+            $stderr.puts "#{@deftheme_filename} already exists, use -o to force overwrite"
             exit 1
           end
         end
-        File.open(deftheme_filename, "w") {|f| f.puts rendered_theme}
+        File.open(@deftheme_filename, "w") {|f| f.puts parse}
       else
-        puts rendered_theme
+        puts parse
       end
     end
 
@@ -39,8 +43,7 @@ module TmthemeToDeftheme
       $stderr.puts message if @options[:debug]
     end
 
-    def lookup_scope scope
-
+    def map_scope scope
       if scope.index ","
         names = scope.split(",").map(&:strip)
         debug_out names
@@ -73,11 +76,12 @@ module TmthemeToDeftheme
       "#{make_attr s, "foreground"} #{make_attr s, "background"} #{italic_underline_bold s}"
     end
 
-    def map_scope_to_emacslisp hash
-      emacs_face = lookup_scope hash["scope"]
-      settings = hash["settings"]
+    def map_scope_to_emacs_face hash
+      emacs_face = map_scope hash["scope"]
       return nil if emacs_face.nil?
-      mapped_scope = {face: emacs_face, settings: settings, scope: hash["scope"]}
+      settings = hash["settings"]
+      emacs_face = [emacs_face] unless emacs_face.class == Array
+      mapped_scope = emacs_face.map{|face| {face: face, settings: settings, scope: hash["scope"]}}
       debug_out mapped_scope
       mapped_scope
     end
@@ -156,29 +160,24 @@ module TmthemeToDeftheme
       end
     end
 
-    def convert
-
+    def parse
       debug_out "= Converting : #{@theme_filename} =============================="
       debug_out "- tmTheme scope settings --------------------"
       debug_out @plist["settings"].to_yaml
 
-      @author          = @plist["author"]
-      @name            = @plist["name"]
-      @theme_name      = "#{@plist["name"]}".downcase.tr ' _', '-'
-      @long_theme_name = "#{@theme_name}-theme"
       @base_settings   = @plist["settings"].first["settings"]
       @base_bg_hex     = fix_rgba @base_settings["background"]
       @base_bg         = Color::RGB.from_html @base_bg_hex
       @base_fg_hex     = fix_rgba @base_settings["foreground"]
       @base_fg         = Color::RGB.from_html @base_fg_hex
 
+      @emacs_faces     = @plist["settings"].collect{|s| map_scope_to_emacs_face(s) if s["scope"] }.flatten.compact
+
       if lighttheme?
         debug_out "- Converting : Light Theme ----------------"
       else
         debug_out "- Converting : Dark Theme ----------------"
       end
-
-      @emacs_faces = @plist["settings"].collect{|s| map_scope_to_emacslisp(s) if s["scope"] }.compact
 
       # Debug faces
       debug_out "- Mapped faces ------------------------------"
