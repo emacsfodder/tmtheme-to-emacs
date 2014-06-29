@@ -1,5 +1,3 @@
-<% # -*- mode: emacs-lisp -*-
-%>
 ;;; <%= @long_theme_name %>.el --- an Emacs 24 theme based on <%= @name %> (tmTheme)
 ;;
 ;;; Author: Auto Converted to Emacs 24 by tmtheme-to-deftheme (tm2deftheme)

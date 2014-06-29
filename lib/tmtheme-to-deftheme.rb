@@ -211,7 +211,7 @@ module TmthemeToDeftheme
                                             File.dirname(__FILE__),
                                             '..',
                                             'templates',
-                                            'deftheme.eruby'
+                                            'deftheme.erb.el'
                                             )))
         .result binding
     end
