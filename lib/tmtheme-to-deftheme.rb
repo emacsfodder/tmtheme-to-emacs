@@ -23,7 +23,6 @@ module TmthemeToDeftheme
 
       if @options[:f]
         @deftheme_filename = "#{@long_theme_name}.el"
-        puts "DEFTHEME NAME : #{@deftheme_filename}"
         unless @options[:s]
           $stderr.puts "Creating: #{@deftheme_filename}"
         end
